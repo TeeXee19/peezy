@@ -1122,6 +1122,9 @@ width: 427px;
 	margin-top: 42px;
 }
 
+.rewards-checkbox img{
+	margin-right: 5px;
+}
 .rewards-content{
 	width: 548px;
 	height: 56px;
