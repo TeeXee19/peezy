@@ -407,7 +407,7 @@ section {
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-    color: #fff;
+    color: #FE9306;
     text-decoration: none;
 }
 
@@ -426,7 +426,7 @@ section {
 }
 
 .navbar.active .nav-link {
-    color: #555;
+    color: #FE9306;
 }
 
 .navbar.active .nav-link:hover,
@@ -439,6 +439,16 @@ section {
     color: #555;
 }
 
+.navbar-nav > li.active > ul {
+	margin-top: 0;
+}
+
+.navbar-nav > li.active > a,
+.navbar-nav > li > a:focus,
+.navbar-nav > li > a:hover {
+	background-color: transparent;
+	color: #FE9306;
+}
 
 /* Change navbar styling on small viewports */
 @media (max-width: 991.98px) {
@@ -465,6 +475,10 @@ section {
 	text-align: center;
 
 	color: #FFFFFF;
+}
+
+.navbar-text.active{
+	color: #FE9306;
 }
 
 .cover{
@@ -952,4 +966,124 @@ color: #404040;
 	letter-spacing: -0.5px;
 
 	color: #FDFDFD;
+}
+
+
+
+/*Features Page*/
+
+.features-section1{
+	height: 400px;
+}
+
+.features-section1 div{
+	margin-top: 100px;
+}
+
+.features-content-section{
+	height: 303px;
+	margin-top: 36px;
+
+}
+
+.features-img {
+	background-image: url(../img/features-bg.png);
+	background-repeat: no-repeat;
+}
+
+.features-section2-content{
+	margin-left: 50px;
+	margin-right: 50px;
+	width: 483px;
+	height: 327px;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.feature-section2-content div a{
+	margin-right: 30px;
+}
+
+.features-section2-header{
+width: 423px;
+
+font-weight: 600;
+font-size: 36px;
+line-height: 113%;
+
+/* or 41px */
+align-items: center;
+letter-spacing: -0.5px;
+
+}
+
+.features-section2-text{
+width: 491px;
+height: 82px;
+margin-top: 23px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 200%;
+
+/* or 36px */
+align-items: center;
+letter-spacing: -0.5px;
+
+/* Peezy/TextColor */
+color: #404040;
+}
+
+.rewards{
+	position: absolute;
+	width: 921px;
+	height: 360px;
+	left: 259px;
+
+	background: #FFFFFF;
+	box-shadow: 0px 0px 40px #EEEEEE;
+	border-radius: 8px;
+}
+
+.features-section3{
+	height: 550px;
+	padding-top: 150px;
+}
+.features-section3-main {
+	width: 1030px;
+	height: 330px;
+
+	background: #FFFFFF;
+	box-shadow: 0px 0px 40px #EEEEEE;
+	border-radius: 8px;
+}
+
+.features-section3-content{
+	padding-top: 60px;
+padding-left: 116px;
+width: 427px;
+}
+
+.btn-features-section3{
+	width: 180px;
+	height: 40px;
+	font-size: 20px;
+
+	background: #FE9206;
+	border-color: #FE9206;
+	border-radius: 6px;
+}
+
+.features-section3 img{
+	position: absolute;
+	padding-left: 65px;
+	top: 3155px;
+	left: 611.667px;
+}
+
+.features-peezy-points{
+	height: 500px;
+	margin-top: 50px;
 }
