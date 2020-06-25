@@ -1142,3 +1142,88 @@ width: 427px;
 
 	margin-top: 41px;
 }
+
+/*Login Page*/
+.login-bg{
+	background-image: url(../img/login-bg.png); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 690px;
+	background-color: #ffffff;
+
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.l-brand{
+
+	position: inherit;
+    left: 50%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;	
+}
+
+.login-nav{
+	border: 1px solid #EEEEEE;
+	background-color: #FFFFFF;
+}
+
+.login-content{
+	height: auto;
+	margin-top: 28px;
+}
+
+.login-header{
+	width: 300px;
+
+	font-style: normal;
+	font-weight: 600;
+	font-size: 35px;
+	line-height: 80%;
+}
+
+.field-icon {
+  float: right;
+  margin-left: -20px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+  padding-right: 15px;
+}
+
+.login-form{
+	padding: 50px;
+	padding-left: 200px;
+	height: 440px;
+}
+
+.login-form-header{
+	font-style: normal;
+font-weight: normal;
+font-size: 36px;
+}
+
+.login-field{
+
+	width: 300px;
+	/* Peezy/TextField */
+background: #F4F4F4;
+/* Peezy/TextColor2 */
+border: 0.5px solid #CDCDCD;
+box-sizing: border-box;
+border-radius: 5px;
+}
+
+.login-form-btn{
+	width: 300px;
+	height: 40px;
+	border-radius: 6px;
+	color: #FFFFFF;
+	margin-top: 10px;
+}
+
+.login-input{
+	padding-top: 15px;
+}
