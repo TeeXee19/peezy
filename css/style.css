@@ -1229,3 +1229,22 @@ border-radius: 5px;
 	font-size: 14px;
 	letter-spacing: -0.5px;
 }
+.sign-up-bg{
+	background-image: url(../img/login-bg.png); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 689px;
+	background-color: #ffffff;
+
+}
+
+.sign-up-form{
+	padding-left: 200px;
+	height: 440px;
+}
+
+.sign-up-content{
+	height: 434px;
+	margin-top: 39px;
+}
+
