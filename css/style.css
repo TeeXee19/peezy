@@ -1226,4 +1226,6 @@ border-radius: 5px;
 
 .login-input{
 	padding-top: 15px;
+	font-size: 14px;
+	letter-spacing: -0.5px;
 }
