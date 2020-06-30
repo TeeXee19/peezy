@@ -1321,3 +1321,22 @@ border-radius: 5px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 0;
 }
+
+.new-field-icon {
+  float: right;
+  margin-left: -20px;
+  margin-top: -25px;
+  z-index: 2;
+  padding-right: 15px;
+}
+
+.rotate-n-15 {
+  transform: rotate(-15deg);
+}
+
+.new-password-input{
+padding-top: 15px;
+	font-size: 14px;
+	letter-spacing: -0.5px;
+	width: 310px;	
+}
