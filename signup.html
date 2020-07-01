@@ -41,7 +41,7 @@
 
 <section class="container sign-up-content">
 	<div class="row">
-	<div>
+	<div class="sign-up-div-hidden">
 		<img src="./img/signup-img.png">
     <div class="sign-up-subcontent">
       <h5 class="text-theme"> Do You Know?</h5>
@@ -82,8 +82,8 @@
        </div>
 
         
-
-         <div class="form-group">
+       <div class="row">
+         <div class="col-md-6 form-group">
             <label for="phone">Phone Number</label>
             <div class="form-group highlight-addon field-signupform-phone required">
                <div class="input-group">
@@ -94,37 +94,8 @@
             </div>    
          </div>
         
-        
-         <div class="form-group">
-            <label for="address">Address: </label>
-            <div class="form-group highlight-addon">
-              <input type="textarea" id="signupform-address" class="form-control" name="SignupForm[address]" placeholder="Address" >
-            </div>    
-         </div>
 
-         <div class="row">
-
-           <div class="form-group col-md-6">
-              <label for="state">State: </label>
-              <div class="form-group highlight-addon field-signupform-phone required">
-                <input type="text" id="signupform-state" class="form-control" name="SignupForm[state]" required>
-                 <div class="valid-feedback">Valid.</div>
-                 <div class="invalid-feedback">Please fill out this field.</div>
-              </div>      
-           </div>
-
-           <div class="form-group col-md-6">
-              <label for="city">City: </label>
-              <div class="form-group highlight-addon field-signupform-city required">
-                <input type="text" id="signupform-city" class="form-control" name="SignupForm[city]" required>
-                 <div class="valid-feedback">Valid.</div>
-                 <div class="invalid-feedback">Please fill out this field.</div>
-              </div>      
-           </div>
-
-         </div>
-
-         <div class="form-group">
+         <div class="col-md-6 form-group">
             <label for="zip-code">Postal/Zip Code</label>
             <div class="form-group highlight-addon field-signupform-zip-code required">
                <div class="input-group">
@@ -134,6 +105,7 @@
                <div class="invalid-feedback">Please fill out this field.</div>
             </div>    
           </div>
+        </div>
 
 
          <div class="row">

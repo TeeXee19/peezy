@@ -1230,22 +1230,109 @@ border-radius: 5px;
 	font-size: 14px;
 	letter-spacing: -0.5px;
 }
+
+
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+
+.login-form{
+	padding-left: 91px;
+	width: 440px;
+}
+
+
+
+}
+
+@media only screen and (min-width: 750px) and (max-width: 990px) {
+
+.login-form{
+	padding: 30px;
+	width:360px;
+}
+
+.login-img{
+	width: 350px;
+}
+
+}
+
+
+@media only screen and (min-width: 380px) and (max-width: 740px) {
+
+.login-form{
+	padding: 30px;
+	width:360px;
+	align-self: center;
+}
+.login-div-hidden{
+	display: none;
+}
+
+.login-content {
+    height: auto;
+    margin-top: 28px;
+    padding: 46px;
+}
+
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 379px){
+
+.login-form{
+	padding: 30px;
+	width:360px;
+	align-self: center;
+}
+.login-div-hidden{
+	display: none;
+}
+
+.login-content {
+    height: auto;
+    margin-top: 28px;
+    padding: 17px;
+    width: auto;
+}
+}
+
+@media only screen and (max-width: 320px) {
+
+.login-form{
+	padding: 30px;
+	width:360px;
+	align-self: center;
+}
+.login-div-hidden{
+	display: none;
+}
+
+.login-content {
+    height: auto;
+    margin-top: 28px;
+    padding: 17px;
+    width: auto;
+    margin-left: -23px;
+}
+}
+
+/*Sign Up Page*/
 .sign-up-bg{
 	background-image: url(../img/login-bg.png); 
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 930px;
 	background-color: #ffffff;
 
 }
 
 .sign-up-form{
 	padding-left: 200px;
-	height: 640px;
+	height: 447px;
 }
 
 .sign-up-content{
-	height: 690px;
+	height: 449px;
 	margin-top: 39px;
 }
 
@@ -1303,6 +1390,86 @@ border-radius: 5px;
 	letter-spacing: -0.5px;
 
 	color: #FDFDFD;
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+
+.sign-up-form{
+	padding-left: 91px;
+	width: 405px;
+}
+
+
+
+}
+
+@media only screen and (min-width: 750px) and (max-width: 990px) {
+
+.sign-up-form{
+	padding: 30px;
+	width:360px;
+}
+
+
+}
+
+
+@media only screen and (min-width: 380px) and (max-width: 740px) {
+
+.sign-up-form{
+	padding: 30px;
+	width:360px;
+}
+
+.sign-up-div-hidden{
+	display: none;
+}
+
+.sign-up-content {
+    height: auto;
+    margin-top: 28px;
+    padding: 46px;
+}
+
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 379px){
+
+.sign-up-form{
+	padding: 30px;
+	width:360px;
+}
+.sign-up-div-hidden{
+	display: none;
+}
+
+.sign-up-content {
+    height: auto;
+    margin-top: 28px;
+    padding: 17px;
+    width: auto;
+}
+}
+
+@media only screen and (max-width: 320px) {
+
+.sign-up-form{
+	padding: 30px;
+	width:360px;
+	align-self: center;
+}
+.sign-up-div-hidden{
+	display: none;
+}
+
+.sign-up-content {
+    height: auto;
+    margin-top: 28px;
+    padding: 17px;
+    width: auto;
+    margin-left: -23px;
+}
 }
 
 // workaround
