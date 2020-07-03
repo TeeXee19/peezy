@@ -1,5 +1,3 @@
-(function($) {
-  "use strict";
  $(document).ready(function(e){
 	      $('.search-panel .dropdown-menu').find('a').click(function(e) {
 				e.preventDefault();
@@ -38,5 +36,12 @@ $(document).ready(function() {
 });
 
 
-
-})(jQuery);
+  $(function () {
+    $(window).on('scroll', function () {
+        if ( $(window).scrollTop() > 10 ) {
+            $('.navbar').addClass('active');
+        } else {
+            $('.navbar').removeClass('active');
+        }
+    });
+});

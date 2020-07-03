@@ -20,15 +20,7 @@
      <script type="text/javascript" src="js/custom.js"></script>
 
      <script type="text/javascript">
-     	$(function () {
-    $(window).on('scroll', function () {
-        if ( $(window).scrollTop() > 10 ) {
-            $('.navbar').addClass('active');
-        } else {
-            $('.navbar').removeClass('active');
-        }
-    });
-});
+    
      </script>
 
     <title>Peezy</title>
@@ -109,9 +101,10 @@
 	    </div>
 </section>
 
-<section class="container">
+<section class="container section3"><!-- Added class "section3" -->
 	<div class="row">
-		<div><img src="img/man.png"></div>
+		<!-- Added class "section3-img" -->
+		<div class="section3-img"><img src="img/man.png"></div>
 		<div class="section3-content column">
 			<h4 class="section3-header text-theme">International Calling made Simple!</h4>
 			<p class="section3-text">We make international calling simple, reliable, and cheap based on your unique calling behavior. Download the Peezy App now!</p>
@@ -217,7 +210,8 @@
 
 <section class="section7">
 	<div class="container section7-content">
-		<div><img src="img/devices.png" style="width: 630px;"></div>
+		<!--Added class "section7-img" & "section7-hidden"-->
+		<div class="section7-hidden"><img src="img/devices.png" class="section7-img"></div>
 		<div class="section7-content-text column">
 			<h4 class="section7-header text-theme">Stay Connected on any device, anywhere, anytime</h4>
 			<p class="section7-text">Stay connected with your family and friends with the Peezy App. Download the Peezy app and get a $2 Sign Up Bonus</p>
@@ -234,7 +228,8 @@
 
 <section class="section8">
 	<div class="container row section8-content">
-		<div>
+		<!-- Added class "section8-content-left" -->
+		<div class="section8-content-left">
 			<h4 class="section8-text">Don’t have a Peezy Account?</h4>
 			<p class="section8-subtext">Signing Up is eezy!</p>
 		</div>
