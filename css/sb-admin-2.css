@@ -2412,15 +2412,15 @@ fieldset:disabled a.btn {
 }
 
 .btn-secondary {
-  color: #fff;
-  background-color: #858796;
-  border-color: #858796;
+  color: #FE9306;
+  background-color: #FFF;
+  border-color: #FE9306;
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background-color: #717384;
-  border-color: #6b6d7d;
+  background-color: #FE9306;
+  border-color: #FE9306;
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
@@ -10016,6 +10016,10 @@ a:focus {
   border-left: 0.25rem solid #4e73df !important;
 }
 
+.border-right-primary {
+  border-right: 0.25rem solid #FE9306 !important;
+}
+
 .border-bottom-primary {
   border-bottom: 0.25rem solid #4e73df !important;
 }
@@ -11230,4 +11234,23 @@ body.sidebar-toggled footer.sticky-footer {
 
 .text-theme{
   color: #FE9306;
+}
+
+.card-bg{
+  background-image: url(../img/gift-2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-header-2 {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #FE9306;
+  border-bottom-width: 80%;
+}
+
+
+.mt-dif{
+  margin-top: 2rem !important;
 }
