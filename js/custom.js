@@ -7,6 +7,7 @@
 				$('.input-group #search_param').val(param);
 		   	});
 	      });
+/* $(document).ready(function(e){
 var a = document.getElementByTagName('a').item(0);
 $(a).on('keyup', function(evt){
   console.log(evt);
@@ -14,7 +15,7 @@ $(a).on('keyup', function(evt){
     
     alert('search?');
   } 
-}); 
+}); */
 
 // Disable form submissions if there are invalid fields
 $(document).ready(function() {
@@ -33,6 +34,12 @@ $(document).ready(function() {
       }, false);
     });
   }, false);
+});
+
+
+// Call the dataTables jQuery plugin
+$(document).ready(function() {
+  $('#dataTable').DataTable();
 });
 
 
