@@ -517,7 +517,7 @@
                 <!-- Card Header - Dropdown -->
                 <div class="card-header-2 py-3 d-flex flex-row align-items-center justify-content-between">
 
-                  <h6 class="m-0 font-weight-bold "><a type="btn" id="btnClick1" role="button"><i  class="ri-fw ri-arrow-go-back-fill"></i></a> &nbsp; Go Back</h6>
+                  <h6 class="m-0 font-weight-bold "><a type="btn" id="btnClick3" role="button"><i  class="ri-fw ri-arrow-go-back-fill"></i></a> &nbsp; Go Back</h6>
                 </div>
                 <!-- Card Body -->
                 <center class="card-body">
@@ -713,6 +713,13 @@
       $('#3').show().siblings('div').hide();
       }else if($('#3').css('display')!='none'){
           $('#2').show().siblings('div').hide();
+      }
+      });
+      $('btnClick3').on('click',function(){
+      if($('#3').css('display')!='none'){
+      $('#2').show().siblings('div').hide();
+      }else if($('#2').css('display')!='none'){
+          $('#3').show().siblings('div').hide();
       }
       });
   </script>
