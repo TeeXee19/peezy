@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <link href="remixicon/remixicon.css" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="./css/style.css">
+
+     <script type="text/javascript" src="js/custom.js"></script>
+
+	<title>Peezy | Login </title>
+
+</head>
+<body class="login-bg">
+<nav class="navbar navbar-light login-nav">
+  <a class="navbar-brand l-brand" href="index.html">
+    <img src="./img/peezy.png"  alt="Peezy Logo">
+  </a>
+</nav>
+
+<section class="container login-content">
+	<div class="row">
+    <!-- Added class "login-div-hidden" -->
+	<div class="login-div-hidden">
+		<h3 class="text-theme login-header">Calling made eezy, peezy!</h3>
+    <!-- Added class "login-img" -->
+		<img src="./img/l-img.png" class="login-img">
+	</div>
+
+	<div class="login-form">
+		<h3 class="login-form-header">Welcome!</h3>
+		  <form action="" class="needs-validation" novalidate>
+		    <div class="form-group login-input">
+		      <label for="email">Email:</label>
+		      <input type="email" class="form-control login-field" id="email" placeholder="Enter username" name="email" required>
+		      <div class="valid-feedback">Valid.</div>
+		      <div class="invalid-feedback">Please fill out this field.</div>
+		    </div>
+		    <div class="form-group login-input">
+		      <label for="pwd">Password:</label>
+		      <input type="password" class="form-control login-field" id="pwd" placeholder="Enter password" name="pswd" required>
+              <span toggle="#pwd" class="form-group-append ri-eye-fill field-icon toggle-password"></span>
+		      <div class="valid-feedback">Valid.</div>
+		      <div class="invalid-feedback">Please fill out this field.</div>
+		      <div class="text-right">
+		      <a class="small text-theme" href="reset-password.html">Forgot password?</a></div>
+		    </div>
+		 
+		    <button type="submit" class="btn login-form-btn">Login <i class="ri-arrow-right-line ri-md"></i></button>
+
+		    <div class="text--center login-input">
+		  	<p> Don't have an Account? <a class="text-theme" href="signup.html">Sign up here.</a></p>
+		  </div>
+		  </form>
+		  
+	</div>
+</div>
+</section>
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    	$(".toggle-password").click(function() {
+
+  $(this).toggleClass("ri-eye-fill ri-eye-off-fill");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+    </script>
+    <script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+</body>
+
+
+</html>
