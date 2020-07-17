@@ -20,6 +20,8 @@
 
   <link href="remixicon/remixicon.css" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 
 </head>
 
@@ -43,7 +45,7 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active border-right-primary">
+      <li class="nav-item">
         <a class="nav-link" href="dashbaord.html">
           <i class="ri-fw ri-home-8-line"></i>
           <span>Dashboard</span></a>
@@ -51,7 +53,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link " href="#" >
+        <a class="nav-link " href="phonebook.html" >
           <i class="ri-book-2-line"></i>
           <span>Phonebook</span>
         </a>
@@ -92,7 +94,7 @@
 
  <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="profile-management.html">
           <i class="ri-fw ri-user-settings-line"></i>
           <span>Profile Management</span></a>
       </li>
@@ -122,7 +124,7 @@
           
               <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Settins</h1>
           </div>
           
           <!-- Topbar Navbar -->
@@ -188,7 +190,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="profile-management.html">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -215,99 +217,75 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-    
-
-          <!-- Content Row -->
-          <div class="row">
-
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-4 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-black-50 text-uppercase mb-1">Phone Number</div>
-                      <div class="h5 mb-0 font-weight-bold text-theme">+234 802 743 9832</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-phone-volume fa-2x text-theme"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-4 col-md-6 mb-4">
-              <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-black-50 text-uppercase mb-1">Continental Plan Bal.</div>
-                      <div class="h5 mb-0 font-weight-bold text-theme">$XXXX</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-dollar-sign fa-2x text-theme"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-             <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-4 col-md-6 mb-4">
-              <div class="card border-left-secondary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-black-50 text-uppercase mb-1">Peezy Points</div>
-                      <div class="h5 mb-0 font-weight-bold text-theme">$XXXX</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-star fa-2x text-theme"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Content Row -->
-
-          <div class="row">
 
             <!-- Area Chart -->
             <div class="col-xl-8 col-lg-7">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold ">Call History</h6>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between card-header-img">
+                  <h6 class="m-0 font-weight-bold ">Username</h6>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
                   <div>
-                    <h4 class="text-theme font-weight-bold"> Do You Know?</h4>
-                    <p> You can get $10 worth of credit for each friend you refer to Peezy! </p>
-                    <button class="btn btn-section4 btn-primary" href="#" role="button">Refer a Friend <i class="ri-arrow-right-line ri-sm"></i></button>
+                    <form action="">
+                      <div>
+                      <label for="u-name" class="profile-account-header">Username</label>
+                         <div class="form-group input-group">
+                            <h1 class='text-info text-gray-600' id="username">Frank123</h1>
+                            <input type="text" class="form-control input-medium col-4" style="display:none;" placeholder="#username">
+                            <button class="btn controls-edit" onclick="edit(this);"><i class="ri-edit-2-fill"></i></button>
+                            <button class="btn btn-primary controls-update offset-1" style="display: none;" onclick="update(this);" type="submit"><i class="ri-save-2-fill"></i> Update</button>
+                         </div>
+                       </div>
+                    </form>
+                  </div>
+                  <div>
+                    
                   </div>
                 </div>
-              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold ">Change Password</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div>
+                    <form action="" class="needs-validation" novalidate>
+                      <div class="form-group old-password-input text--left">
+                        <label for="o-pwd">Old Password:</label>
+                        <input type="password" class="form-control login-field" id="n-pwd" placeholder="Enter Old password" name="o-pswd" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                      </div>
+
+                      <div class="form-group new-password-input text--left">
+                        <label for="n-pwd">Password:</label>
+                          <input type="password" class="form-control login-field" id="n-pwd" placeholder="Enter New Password" name="n-pswd" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                
+                      </div>
+
+                      <div class="form-group new-password-input text--left">
+                        <label for="c-pwd">Confirm Password:</label>
+                        <input type="password" class="form-control login-field" id="c-pwd" placeholder="Confirm New password" name="c-pswd" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                      </div>
+                   
+                      <button type="submit" class="btn btn-primary float-right">Save Password</button>
+                    </form>
+                  </div>
+                  <div>
+                    
+                  </div>
+                </div>
             </div>
           </div>
         </div>
@@ -365,6 +343,62 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+  <script >
+   function edit(element) {
+  var parent = $(element).parent().parent();
+  var placeholder = $(parent).find('.text-info').text();
+  //hide label
+  $(parent).find('h1').hide();
+  //show input, set placeholder
+  var input = $(parent).find('input[type="text"]');
+  var edit = $(parent).find('.controls-edit');
+  var update = $(parent).find('.controls-update');
+  $(input).show();
+  $(edit).hide();
+  $(update).show();
+  //$(input).attr('placeholder', placeholder);
+  }
+
+  function update(element) {
+    var parent = $(element).parent().parent();
+    var placeholder = $(parent).find('.text-info').text();
+    //hide label
+    $(parent).find('h1').show();
+    //show input, set placeholder
+    var input = $(parent).find('input[type="text"]');
+    var edit = $(parent).find('.controls-edit');
+    var update = $(parent).find('.controls-update');
+    $(input).hide();
+    $(edit).show();
+    $(update).hide();
+    //$(input).attr('placeholder', placeholder);
+    $(parent).find('h1').text($(input).val());
+  }
+
+  </script>
 
 </body>
 
