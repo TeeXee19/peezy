@@ -2389,8 +2389,8 @@ fieldset:disabled a.btn {
 
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #2e59d9;
-  border-color: #2653d4;
+  background-color: #FE9306E3;
+  border-color: #FE9306E3;
   box-shadow: 0 0 0 0.2rem rgba(105, 136, 228, 0.5);
 }
 
@@ -11299,6 +11299,9 @@ body.sidebar-toggled footer.sticky-footer {
   width: 115%;
 }
 
+.edit-profile{
+  height: 620px;
+}
 
 .edit-profile-img {
   position: absolute;

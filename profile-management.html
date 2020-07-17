@@ -247,7 +247,7 @@
 
             <!-- Area Chart -->
             <div class="col-xl-6 col-lg-6">
-              <div class="card shadow mb-4 phonebook-contact">
+              <div class="card shadow mb-4 edit-profile">
                 <!-- Card Body -->
                 <div class="card-body">
                   <div class="row">
@@ -310,14 +310,30 @@
                          </div>   
                        </div>
                      </div>
-
-                     <div>
+                      
+                    <div>
                        <label for="address" class="profile-account-header">Address</label>
                          <div class="form-group">
                             <input type="textarea" id="user-profile-address" class="form-control" name="UserProfile[address]" value="Lorem ipsum dolor sit amet" disabled="true">
                          </div>
                      </div>
 
+                     <div class="row">
+                       <div class="col-md-6 mb-0">
+                         <label for="zipCode" class="profile-account-header">City</label>
+                         <div class="form-group">
+                            <input type="text" id="user-profile-zipCode" class="form-control" name="UserProfile[zipCode]" value="Somewhere" disabled="true">
+                         </div>   
+                       </div>
+                       <div class="col-md-6 mb-0">
+                         <label for="zipCode" class="profile-account-header">State/Province</label>
+                         <div class="form-group">
+                            <input type="text" id="user-profile-zipCode" class="form-control" name="UserProfile[zipCode]" value="Over the Moon" disabled="true">
+                         </div>   
+                       </div>
+                     </div>
+
+                     
                     </form>
                   </div>
                 </div>
@@ -488,6 +504,21 @@
                              <div class="valid-feedback">Valid.</div>
                              <div class="invalid-feedback">Please fill out this field.</div>
                          </div>
+                     </div>
+
+                     <div class="row">
+                       <div class="col-md-6 mb-0">
+                         <label for="city" class="profile-account-header">City</label>
+                         <div class="form-group">
+                            <input type="text" id="user-profile-city" class="form-control" name="UserProfile[city]" value="Somewhere" >
+                         </div>   
+                       </div>
+                       <div class="col-md-6 mb-0">
+                         <label for="state" class="profile-account-header">State/Province</label>
+                         <div class="form-group">
+                            <input type="text" id="user-profile-state" class="form-control" name="UserProfile[state]" value="Over the Moon" >
+                         </div>   
+                       </div>
                      </div>
 
                     </form>
