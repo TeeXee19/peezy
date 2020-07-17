@@ -6570,10 +6570,13 @@ button.bg-dark:focus {
 
 .rounded-sm {
   border-radius: 0.2rem !important;
+    background-color: #FE93062E;
+
 }
 
 .rounded {
   border-radius: 0.35rem !important;
+  background-color: #FE93062E;
 }
 
 .rounded-top {
@@ -6602,6 +6605,8 @@ button.bg-dark:focus {
 
 .rounded-circle {
   border-radius: 50% !important;
+  height: 120px;
+  width: 120px;
 }
 
 .rounded-pill {
@@ -10107,6 +10112,7 @@ a:focus {
   transform: rotate(-15deg);
 }
 
+
 .dropdown .dropdown-menu {
   font-size: 0.85rem;
 }
@@ -11278,6 +11284,7 @@ body.sidebar-toggled footer.sticky-footer {
     width: min-content;
 }
 
+
 .phonebook-contact{
   height: 550px;
 }
@@ -11291,3 +11298,63 @@ body.sidebar-toggled footer.sticky-footer {
 .phonebook-info div img{
   width: 115%;
 }
+
+
+.edit-profile-img {
+  position: absolute;
+  transform: translate(-110%, 240%);
+  -ms-transform: translate(-50%, -50%);
+  border: none;
+  cursor: pointer;
+  border-radius:100%;
+}
+
+.edit-profile-img:hover {
+  background-color: #FE93062E;
+}
+
+
+#imageUpload{
+  display: none;
+}
+
+.upload-button{
+  background-color: #fff;
+  border-radius: 100%; 
+}
+
+.rounded-total{
+  border-radius: 100% !important;
+    background-color: #FE93062E;
+    height: 50px;
+    width: 50px;
+}
+
+.rotate-n-40 {
+  transform: rotate(-40deg);
+}
+
+.profile-account{
+  height: 340px ;
+}
+
+.profile-account-header{
+  font-size: 14px;
+  color: #BDBDBD;
+}
+
+.profile-account-text{
+  font-size: 24px;
+}
+
+
+.text-green{
+  color: #1CDF81;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.text-green:hover{
+  color: #1CDF81;
+}
+

@@ -39,7 +39,8 @@ $(document).ready(function() {
 
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
-  $('#dataTable').DataTable();
+  $('#dataTable').DataTable(
+    );
 });
 
 
@@ -51,5 +52,22 @@ $(document).ready(function() {
             $('.navbar').removeClass('active');
         }
     });
+}); 
+
+$("#uploadImage").click(function(e) {
+    $("#imageUpload").click();
 });
+
+function fasterPreview( uploader ) {
+    if ( uploader.files && uploader.files[0] ){
+          $('#profileImage').attr('src', 
+             window.URL.createObjectURL(uploader.files[0]) );
+    }
+}
+
+$("#imageUpload").change(function(){
+    fasterPreview( this );
+});
+
+
 
