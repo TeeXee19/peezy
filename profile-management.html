@@ -554,51 +554,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js" integrity="sha256-QQRUO4QtEKgzJoMMdtkBecbAQkssGCNGBnniwoShRCQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js" integrity="sha256-ExU5Nn6loL4heLikw79Dc3sUnDaOpg0Kox8NJWXeveQ=" crossorigin="anonymous"></script>
 
-
-    <script type="text/javascript">
-      $(".toggle-password").click(function() {
-
-        $(this).toggleClass("ri-eye-fill ri-eye-off-fill");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") == "password") {
-          input.attr("type", "text");
-        } else {
-          input.attr("type", "password");
-        }
-      });
-    </script>
-
-
-    <script>
-// Disable form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-</script>
-
 <script type="text/javascript" src="./js/intlTelInput.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
-<script >
-  var input = document.querySelector("#phone");
-  window.intlTelInput(input, {
-  });
-</script>
 <script>
   function copy_text() {
   /* Get the text field */

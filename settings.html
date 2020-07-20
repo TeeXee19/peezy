@@ -13,14 +13,12 @@
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.css" rel="stylesheet">
-
   <link href="remixicon/remixicon.css" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
 </head>
@@ -87,6 +85,21 @@
         <a class="nav-link" href="tables.html">
           <i class="ri-fw ri-star-line"></i>
           <span>Peezy Rewards</span></a>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Demo</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-theme py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#">Hello!</a>
+            <a class="collapse-item" href="#">Hallo!</a>
+            <a class="collapse-item" href="#">Ni Huo!</a>
+            <a class="collapse-item" href="#">Bonjour!</a>
+          </div>
+        </div>
       </li>
 
  <!-- Divider -->
@@ -230,12 +243,11 @@
                   <div>
                     <form action="">
                       <div>
-                      <label for="u-name" class="profile-account-header">Username</label>
                          <div class="form-group input-group">
-                            <h1 class='text-info text-gray-600' id="username">Frank123</h1>
+                            <h3 class='text-info text-gray-600' id="username">Frank123</h3>
                             <input type="text" class="form-control input-medium col-4" style="display:none;" placeholder="#username">
-                            <a class="btn controls-edit" onclick="edit(this);"><i class="ri-edit-2-fill"></i></a>
-                            <button class="btn btn-primary controls-update offset-1" style="display: none;" onclick="update(this);" type="submit"><i class="ri-save-2-fill"></i> Update</button>
+                            <a class="btn controls-edit" onclick="edit(this);"><i class="ri-edit-2-fill pt-2 text-theme"></i></a>
+                            <button class="btn btn-primary controls-update offset-1" style="display: none;" onclick="update(this);" ><i class="ri-save-2-fill"></i> Update</button>
                          </div>
                        </div>
                     </form>
@@ -343,59 +355,38 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
-
-
-<script>
-// Disable form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-</script>
+  <script src="js/custom.js"></script>
 
   <script >
    function edit(element) {
-  var parent = $(element).parent().parent();
-  var placeholder = $(parent).find('.text-info').text();
-  //hide label
-  $(parent).find('h1').hide();
-  //show input, set placeholder
-  var input = $(parent).find('input[type="text"]');
-  var edit = $(parent).find('.controls-edit');
-  var update = $(parent).find('.controls-update');
-  $(input).show();
-  $(edit).hide();
-  $(update).show();
-  //$(input).attr('placeholder', placeholder);
+      var parent = $(element).parent().parent();
+      var placeholder = $(parent).find('.text-info').text();
+      //hide label
+      $(parent).find('h3').hide();
+      //show input, set placeholder
+      var input = $(parent).find('input[type="text"]');
+      var edit = $(parent).find('.controls-edit');
+      var update = $(parent).find('.controls-update');
+      $(input).show();
+      $(edit).hide();
+      $(update).show();
+      //$(input).attr('placeholder', placeholder);
   }
 
   function update(element) {
-    var parent = $(element).parent().parent();
-    var placeholder = $(parent).find('.text-info').text();
-    //hide label
-    $(parent).find('h1').show();
-    //show input, set placeholder
-    var input = $(parent).find('input[type="text"]');
-    var edit = $(parent).find('.controls-edit');
-    var update = $(parent).find('.controls-update');
-    $(input).hide();
-    $(edit).show();
-    $(update).hide();
-    //$(input).attr('placeholder', placeholder);
-    $(parent).find('h1').text($(input).val());
+      var parent = $(element).parent().parent();
+      var placeholder = $(parent).find('.text-info').text();
+      //hide label
+      $(parent).find('h3').show();
+      //show input, set placeholder
+      var input = $(parent).find('input[type="text"]');
+      var edit = $(parent).find('.controls-edit');
+      var update = $(parent).find('.controls-update');
+      $(input).hide();
+      $(edit).show();
+      $(update).hide();
+      //$(input).attr('placeholder', placeholder);
+      $(parent).find('h3').text($(input).val());
   }
 
   </script>

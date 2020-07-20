@@ -30,8 +30,7 @@
 
  <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 </head>
 
@@ -293,7 +292,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <center>
-                          <a href="#" data-toggle="modal" data-target="#cardModal"><i class="ri-tools-fill ri-3x text-theme"></i>
+                          <a type="btn" id="btnClick4" role="button"><i class="ri-tools-fill ri-3x text-theme"></i>
                           <p class="text-theme">Manage Cards</p></a>
                         </center>
 
@@ -590,7 +589,69 @@
       </div>
       <!-- End of Payment Method -->
 
+       <div id="4" class="container-fluid" style="display: none;">
+                <div>
+                  <div class="table-responsive" >
+                    <div class="table-wrapper2">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"><h2> <a type="btn" id="btnClick5" role="button"><i  class="ri-fw ri-arrow-go-back-fill"></i></a> Manage <b>Cards</b></h2></div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-success add-new"><i class="fa fa-plus"></i> Add New</button>
+                    </div>
+                </div>
+            </div>
+            <table class="table table2 table-bordered" id="dataTable">
 
+                <thead>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Administration</td>
+                        <td>(171) 555-2222</td>
+                        <td>(171) 555-2222</td>
+                        <td>
+                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Peter Parker</td>
+                        <td>Customer Service</td>
+                        <td>(313) 555-5735</td>
+                        <td>(313) 555-5735</td>
+                        <td>
+                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fran Wilson</td>
+                        <td>Human Resources</td>
+                        <td>(503) 555-9931</td>
+                        <td>(503) 555-9931</td>
+                        <td>
+                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>      
+                </tbody>
+            </table>
+
+                    </div>
+                  </div>        
+                </div>
+    
+       </div>
 
 
       </div>
@@ -701,71 +762,13 @@
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
- 
-
-  <script>
-       $('#btnClick').on('click',function(){
-      if($('#1').css('display')!='none'){
-      $('#2').show().siblings('div').hide();
-      }else if($('#2').css('display')!='none'){
-          $('#1').show().siblings('div').hide();
-      }
-      });
-  </script>
-
-  <script>
-       $('#btnClick1').on('click',function(){
-      if($('#2').css('display')!='none'){
-      $('#1').show().siblings('div').hide();
-      }else if($('#1').css('display')!='none'){
-          $('#2').show().siblings('div').hide();
-      }
-      });
-  </script>
-
-  <script>
-       $('#btnClick2').on('click',function(){
-      if($('#2').css('display')!='none'){
-      $('#3').show().siblings('div').hide();
-      }else if($('#3').css('display')!='none'){
-          $('#2').show().siblings('div').hide();
-      }
-      });
-
-      $('btnClick3').on('click',function(){
-      if($('#3').css('display')!='none'){
-      $('#2').show().siblings('div').hide();
-      }else if($('#2').css('display')!='none'){
-          $('#3').show().siblings('div').hide();
-      }
-      });
-  </script>
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput-jquery.min.js" integrity="sha256-EfJSwi/WrHIzumjUmRZ25gVg2GRTTVpqkps8CNtcnLI=" crossorigin="anonymous"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js" integrity="sha256-QQRUO4QtEKgzJoMMdtkBecbAQkssGCNGBnniwoShRCQ=" crossorigin="anonymous"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js" integrity="sha256-ExU5Nn6loL4heLikw79Dc3sUnDaOpg0Kox8NJWXeveQ=" crossorigin="anonymous"></script>
     <script>
-// Disable form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+
 </script>
 
 <script type="text/javascript" src="./js/custom.js"></script>
