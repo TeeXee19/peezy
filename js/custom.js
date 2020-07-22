@@ -70,7 +70,7 @@ $("#imageUpload").change(function(){
 });
 
 
-
+//Manage Cards DataTable
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
   var actions = $(".table2 td:last-child").html();
