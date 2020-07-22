@@ -240,30 +240,174 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div id="1" class="container-fluid">
 
-       
 
-        <center >
-      	 <div class="col-xl-12 col-md-12 h-100">
-              <div class="shadow bg-white py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-		                <center>
-        				   <div class="rounded-total"><center ><i class="ri-bank-card-line ri-2x text-theme pt-2"></i></center></div>
-			               <p class="text-gray-600 mt-1">You are yet to make any payment.</p>    
-			               <a class="btn btn-primary" href="initial-payment.html" type="btn">Recharge Now</a>
-                        </center>
+          <!-- Amount Selection -->
+          <div class="row">
 
-                    </div>
-                  </div>
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-12 h-100">
+              <center class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header-2 py-3 d-flex flex-row align-items-center justify-content-between">
+
+                  <h6 class="m-0 font-weight-bold ">Payment</h6>
                 </div>
-              </div>
-            </div>
-        </center>
+                <!-- Card Body -->
+                <center class="card-body">
+                     <form action="" role="form" class="needs-validation" novalidate>
+                         <div class = "form-group col-sm-12 col-lg-12">
+                            <label for="amount" class = "col-sm-12 control-label ">How much do you want to recharge?</label>
+                            <div class="col-sm-4 col-lg-4">
+                                <input type="text" class="form-control" id="amount" placeholder="Amount" name="amount" required>
+                            </div>
+                         </div>
 
+                         <div class = "form-group col-sm-12 col-lg-12 ">
+                            <label class="col-sm-12 control-label">Quick Recharge</label>
+                            <div class="btn-group btn-group-toggle payment-card" data-toggle="buttons">
+                              <label class="btn btn-secondary ">
+                                <input type="radio" name="options" id="option1" autocomplete="off" > $ &nbsp; 10
+                              </label>
+                              <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> $ &nbsp; 20
+                              </label>
+                              <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option3" autocomplete="off"> $ &nbsp; 30
+                              </label>
+                           
+                              <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option4" autocomplete="off" > $ &nbsp; 50
+                              </label>
+                              <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option5" autocomplete="off"> $ &nbsp; 100
+                              </label>
+                              <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option6" autocomplete="off"> $ &nbsp; 200
+                              </label>
+                            </div>
+                         </div>
+
+                
+                          <div class = "form-group col-sm-12 col-lg-6">
+                            
+                            <div class="col-sm-12 mt-dif">
+                                <a name="p1-next" class="btn btn-primary col-sm-8 col-8" id="btnClick" role="button">Next</a> 
+                            </div>
+                         </div>
+                     </form>
+                </center>
+
+              </center>
+
+            </div>
+          </div>
+
+      </div>
+      <!-- End of Amount Selection -->
+        
+
+        <!-- Payment Method -->
+        <div id="2" class="container-fluid" style="display: none;">
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-12 h-100">
+              <center class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header-2 py-3 d-flex flex-row align-items-center justify-content-between">
+
+                  <h6 class="m-0 font-weight-bold "><a type="btn" id="btnClick1" role="button"><i  class="ri-fw ri-arrow-go-back-fill"></i></a> &nbsp; Go Back</h6>
+                </div>
+                <!-- Card Body -->
+                <center class="card-body">
+                     <form action="" role="form" class="needs-validation" novalidate>
+                         <div class = "form-group col-sm-12 col-lg-8">
+                            <label  class = "col-sm-12 control-label ">Eezy charge my card when my balance is below</label>
+                            <div class="row col-sm-12 col-lg-6">
+                              <div class="col-sm-8 col-lg-8">
+                                <select class="custom-select" id="inputGroupSelect01" >
+                                  <option selected>Choose...</option>
+                                  <option value="1">$1</option>
+                                  <option value="2">$2</option>
+                                  <option value="3">$3</option>
+                              </select>
+                            </div>
+       
+                              <span class="float-right"><button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                 NO
+                               </button>
+                             </span>
+                            </div>
+                            
+                         </div>
+
+                            
+
+                         <div class = "form-group col-sm-12 col-lg-6">
+                           <label  class = "col-sm-12 control-label">Payment Method</label>
+                            <div class = "col-sm-8">
+                              <select class="custom-select" id="inputGroupSelect02" required>
+                                  <option selected>Please select your desired payment method...</option>
+                                  <option value="1">MasterCard, Visa , Verve</option>
+                                  <option value="2">PayPal</option>
+                                  <option value="3">Stripe</option>
+                                </select>
+                              </div>
+                         </div>
+
+                
+                          <div class = "form-group col-sm-12 col-lg-6">
+                            
+                            <div class="col-sm-12 mt-dif">
+                                <button type="submit" name="p1-next" class="btn btn-primary col-sm-8 col-8">Next</button> 
+                            </div>
+                         </div>
+                     </form>
+                </center>
+
+              </center>
+
+            </div>
+          </div>
+
+      </div>
+      <!-- End of Payment Method -->
+
+      </div>
+      <!-- End of Main Content -->
+
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
         </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -277,7 +421,20 @@
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
 
-  <script type="text/javascript" src="./js/custom.js"></script>
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput-jquery.min.js" integrity="sha256-EfJSwi/WrHIzumjUmRZ25gVg2GRTTVpqkps8CNtcnLI=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js" integrity="sha256-QQRUO4QtEKgzJoMMdtkBecbAQkssGCNGBnniwoShRCQ=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js" integrity="sha256-ExU5Nn6loL4heLikw79Dc3sUnDaOpg0Kox8NJWXeveQ=" crossorigin="anonymous"></script>
+    <script>
+
+</script>
+
+<script type="text/javascript" src="./js/custom.js"></script>
 
 </body>
 
