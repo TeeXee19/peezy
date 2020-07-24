@@ -78,7 +78,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item active border-right-primary">
-        <a class="nav-link " href="payment" >
+        <a class="nav-link " href="payment.html" >
           <i class="ri-fw ri-bank-card-line"></i>
           <span>Peezy Payments</span>
         </a>
@@ -471,45 +471,162 @@
                 <!-- Card Body -->
                 <center class="card-body">
                      <form action="" role="form" class="needs-validation" novalidate>
-                         <div class = "form-group col-sm-12 col-lg-12">
-                            <label for="amount" class = "col-sm-12 control-label ">How much do you want to recharge?</label>
-                            <div class="col-sm-4 col-lg-4">
-                                <input type="text" class="form-control" id="amount" placeholder="Amount" name="amount" required>
-                            </div>
+
+                         <div class = "form-group col-sm-12 col-lg-6">
+                           <label  class = "col-sm-12 control-label">Payment Method</label>
+                            <div class = "col-sm-8">
+                              <select class="custom-select" id="select" required>
+                                  <option selected>Please select your desired payment method...</option>
+                                  <option value="1" >Manual Recharge</option>
+                                  <option value="2">Eezy Charge</option>
+                                  <option value="3">Paypal</option>
+                                </select>
+                              </div>
+                              
                          </div>
 
-                         <div class = "form-group col-sm-12 col-lg-12 ">
-                            <label class="col-sm-12 control-label">Quick Recharge</label>
-                            <div class="btn-group btn-group-toggle payment-card" data-toggle="buttons">
-                              <label class="btn btn-secondary ">
-                                <input type="radio" name="options" id="option1" autocomplete="off" > $ &nbsp; 10
-                              </label>
-                              <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> $ &nbsp; 20
-                              </label>
-                              <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option3" autocomplete="off"> $ &nbsp; 30
-                              </label>
+                         <hr>
+
+                          <!-- Manual Recharge -->
+                          <div class = "form-group col-sm-12 col-lg-6  payment-method m1">
+                            <!-- Recharge Amount -->
+                            <div>
+                                <label  class = "col-sm-12 control-label ">How much do you want to recharge?</label>
+                              <div class="col-sm-8 col-lg-8">
+                                <select class="custom-select" id="manualRechargeAmount" >
+                                  <option selected>Choose...</option>
+                                  <option value="1">$10</option>
+                                  <option value="2">$20</option>
+                                  <option value="3">$25</option>
+                                  <option value="3">$50</option>
+                                  <option value="3">$100</option>
+                                  <option value="3">$150</option>
+                                  <option value="3">$175</option>
+                                  <option value="3">$200</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <!-- Card Selection/Addition -->
+                            <div class=" col-8 row pt-2">
+                                <label  class = "col-sm-12 control-label ">Select Card</label>
+                              <div class="col-sm-9 col-lg-9 row" >
+                                <select class="custom-select" id="savedCards" >
+                                  <option selected>Choose...</option>
+                                  <option value="1">Visa: **** 4223</option>
+                                  <option value="2">Master: **** 4234</option>
+                                </select>
+                              </div>
+                              <span class="ml-1"><btn class="btn btn-primary" href="#" data-toggle="modal" data-target="#cardModal">Add Card</a></span>
+
+                            </div>
+
+                            <!-- Payment Button -->
+                            <div class = "form-group col-sm-12 col-lg-6">
+                                  <div class="col-sm-12 mt-dif">
+                                  <a name="p1-next" class="btn btn-primary col-sm-8 col-8 font-weight-bold" id="btnClick2" href="#">Pay</a> 
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- End of Manual Recharge -->
+                        
+
+                            <!-- Eezy Recharge -->
+                          <div class = "form-group col-sm-12 col-lg-6 payment-method m2" >
+                            <div class = "form-group col-sm-12 col-lg-8">
+                               <label  class = "col-sm-12 control-label ">Do You Want to Use Eezy Recharge?</label>
+                               <div class="row col-sm-12 col-lg-6">      
+                                  <button type="button" class="btn btn-secondary " data-toggle="button" aria-pressed="false" autocomplete="off">
+                                     YES
+                                  </button>
+                                  <button type="button" class="btn btn-secondary ml-1" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                       NO
+                                  </button>
+                               </div>  
+                            </div>
+
+                            <!-- Eezy Recharge Amount -->
+                            <div>
+                                <label  class = "col-sm-12 control-label ">How much do you want to recharge?</label>
+                              <div class="col-sm-8 col-lg-8">
+                                <select class="custom-select" id="eezyRechargeAmount" >
+                                  <option selected>Choose...</option>
+                                  <option value="1">$10</option>
+                                  <option value="2">$20</option>
+                                  <option value="3">$25</option>
+                                  <option value="3">$50</option>
+                                  <option value="3">$100</option>
+                                  <option value="3">$150</option>
+                                  <option value="3">$175</option>
+                                  <option value="3">$200</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <!-- Minimum Balance Limit -->
+                            <div>
+                                <label  class = "col-sm-12 control-label pt-1">when my balance is below: </label>
+                              <div class="col-sm-8 col-lg-8">
+                                <select class="custom-select" id="minimumBalance" >
+                                  <option selected>Choose...</option>
+                                  <option value="1">$2</option>
+                                  <option value="2">$5</option>
+                                  <option value="3">$10</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <!-- Saved Cards -->
+                            <div class=" pt-2">
+                                <label  class = "col-sm-12 control-label ">Select Card</label>
+                              <div class="col-sm-8 col-lg-8 row" >
+                                <select class="custom-select" id="savedCards" >
+                                  <option selected>Choose...</option>
+                                  <option value="1">Visa: **** 4223</option>
+                                  <option value="2">Master: **** 4234</option>
+                                </select>
+                              </div>
+
+                            </div>
+
+                            <div class = "form-group col-sm-12 col-lg-6">
+                                  <div class="col-sm-12 mt-dif">
+                                  <a name="p1-next" class="btn btn-primary col-sm-8 col-8 font-weight-bold" id="btnClick2" href="#">Save</a> 
+                              </div>
+                            </div>                  
                            
-                              <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option4" autocomplete="off" > $ &nbsp; 50
-                              </label>
-                              <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option5" autocomplete="off"> $ &nbsp; 100
-                              </label>
-                              <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option6" autocomplete="off"> $ &nbsp; 200
-                              </label>
-                            </div>
                          </div>
 
-                
-                          <div class = "form-group col-sm-12 col-lg-6">
-                            
-                            <div class="col-sm-12 mt-dif">
-                                <a name="p1-next" class="btn btn-primary col-sm-8 col-8" id="btnClick2" role="button">Next</a> 
+
+                        <!-- Paypal Recharge -->
+                         <div class = "form-group col-sm-12 col-lg-6 payment-method m3">
+                             <img src="./img/paypal.png">                       
+                             <!-- Paypal Recharge Amount -->
+                            <div>
+                                <label  class = "col-sm-12 control-label ">Select Amount</label>
+                              <div class="col-sm-8 col-lg-8">
+                                <select class="custom-select" id="paypalRechargeAmount" >
+                                  <option selected>Choose...</option>
+                                  <option value="1">$10</option>
+                                  <option value="2">$20</option>
+                                  <option value="3">$25</option>
+                                  <option value="3">$50</option>
+                                  <option value="3">$100</option>
+                                  <option value="3">$150</option>
+                                  <option value="3">$175</option>
+                                  <option value="3">$200</option>
+                                </select>
+                              </div>
+
+                            <div class = "form-group col-sm-12 col-lg-6">
+                                  <div class="col-sm-12 mt-dif">
+                                  <a name="p1-next" class="btn btn-primary col-sm-8 col-8 font-weight-bold" id="btnClick2" href="#">Submit</a> 
+                              </div>
+                            </div>  
                             </div>
                          </div>
+                         
                      </form>
                 </center>
 
@@ -522,72 +639,7 @@
       <!-- End of Amount Selection -->
         
 
-        <!-- Payment Method -->
-        <div id="3" class="container-fluid" style="display: none;">
-          <div class="row">
-
-            <!-- Area Chart -->
-            <div class="col-xl-12 col-lg-12 h-100">
-              <center class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header-2 py-3 d-flex flex-row align-items-center justify-content-between">
-
-                  <h6 class="m-0 font-weight-bold "><a type="btn" id="btnClick3" role="button"><i  class="ri-fw ri-arrow-go-back-fill"></i></a> &nbsp; Go Back</h6>
-                </div>
-                <!-- Card Body -->
-                <center class="card-body">
-                     <form action="" role="form" class="needs-validation" novalidate>
-                         <div class = "form-group col-sm-12 col-lg-8">
-                            <label  class = "col-sm-12 control-label ">Eezy charge my card when my balance is below</label>
-                            <div class="row col-sm-12 col-lg-6">
-                              <div class="col-sm-8 col-lg-8">
-                                <select class="custom-select" id="inputGroupSelect01" >
-                                  <option selected>Choose...</option>
-                                  <option value="1">$1</option>
-                                  <option value="2">$2</option>
-                                  <option value="3">$3</option>
-                              </select>
-                            </div>
-       
-                              <span class="float-right"><button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">
-                                 NO
-                               </button>
-                             </span>
-                            </div>
-                            
-                         </div>
-
-                            
-
-                         <div class = "form-group col-sm-12 col-lg-6">
-                           <label  class = "col-sm-12 control-label">Payment Method</label>
-                            <div class = "col-sm-8">
-                              <select class="custom-select" id="inputGroupSelect02" required>
-                                  <option selected>Please select your desired payment method...</option>
-                                  <option value="1">MasterCard, Visa , Verve</option>
-                                  <option value="2">PayPal</option>
-                                  <option value="3">Stripe</option>
-                                </select>
-                              </div>
-                         </div>
-
-                
-                          <div class = "form-group col-sm-12 col-lg-6">
-                            
-                            <div class="col-sm-12 mt-dif">
-                                <button type="submit" name="p1-next" class="btn btn-primary col-sm-8 col-8">Next</button> 
-                            </div>
-                         </div>
-                     </form>
-                </center>
-
-              </center>
-
-            </div>
-          </div>
-
-      </div>
-      <!-- End of Payment Method -->
+      
 
        <div id="4" class="container-fluid" style="display: none;">
                 <div>
@@ -597,7 +649,7 @@
                 <div class="row">
                     <div class="col-sm-8"><h2> <a type="btn" id="btnClick5" role="button"><i  class="ri-fw ri-arrow-go-back-fill"></i></a> Manage <b>Cards</b></h2></div>
                     <div class="col-sm-4">
-                        <button type="button" class="btn btn-success add-new"><i class="fa fa-plus"></i> Add New</button>
+                        <button type="button" class="btn btn-success add-new" data-toggle="modal" data-target="#cardModal"><i class="fa fa-plus"></i> Add New</button>
                     </div>
                 </div>
             </div>
@@ -708,19 +760,54 @@
         </div>
         <div class="modal-body">              
                     <form role="form">
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label>CARD NUMBER</label>
-                                        <input type="tel" class="form-control" placeholder="Valid Card Number" />
-                                </div>
+                      <div class="row">
+                        <!-- Recharge Amount -->
+                        <div class="col-xs-5 col-md-5">
+                          <div class="form-group ">
+                            <label>RECHARGE AMOUNT</label>
+                            <select class="custom-select" id="rechargeAmount" >
+                              <option selected>Choose...</option>
+                              <option value="1">$10</option>
+                              <option value="2">$20</option>
+                              <option value="3">$25</option>
+                              <option value="3">$50</option>
+                              <option value="3">$100</option>
+                              <option value="3">$150</option>
+                              <option value="3">$175</option>
+                              <option value="3">$200</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- Card Number -->
+                        <div class="col-xs-7 col-md-7">
+                            <div class="form-group">
+                                <label>CARD NUMBER</label>
+                                    <input type="tel" class="form-control" placeholder="Valid Card Number" />
                             </div>
+                        </div>
+                      </div>
+
+                       
                         <div class="row">
+                         <!-- Expiration Date Picker -->
                             <div class="col-xs-7 col-md-7">
                                 <div class="form-group">
-                                    <label><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
-                                    <input type="tel" class="form-control" placeholder="MM / YY" />
+                                    <label><span class="hidden-xs"></span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                    <input type="tel" id="month-yearpicker" class="form-control" placeholder="MM / YY" />
+
+                                    <script >
+                                       $('#month-yearpicker').datepicker({
+                                              format: "mm/yyyy",
+                                              minViewMode: 1,
+                                              startView: 1,
+                                          uiLibrary: 'bootstrap4'
+                                        });
+                                    </script>
                                 </div>
                             </div>
+
+                            <!-- CVV -->
                             <div class="col-xs-5 col-md-5 pull-right">
                                 <div class="form-group">
                                     <label>CVV</label>
@@ -728,17 +815,63 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Card Name -->
                         <div class="col-xs-12">
                                 <div class="form-group">
                                     <label>CARD OWNER</label>
-                                    <input type="text" class="form-control" placeholder="Card Owner Names" />
+                                    <input type="text" class="form-control" placeholder="Name on Card" />
                                 </div>
                         </div>
+
+                        <!-- Address  -->
+                        <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label>ADDRESS </label>
+                                    <input type="textarea" class="form-control" placeholder="Address " required="" />
+                                </div>
+                        </div>
+
+                      <div class="row">
+                        <!-- City -->
+                        <div class="col-6">
+                                <div class="form-group">
+                                    <label>CITY</label>
+                                    <input type="text" class="form-control" placeholder="City" required="" />
+                                </div>
+                        </div>
+
+                        <!-- State/Province -->
+                        <div class="col-6">
+                                <div class="form-group">
+                                    <label>STATE/PROVINCE</label>
+                                    <input type="text" class="form-control" placeholder="State/Province" required="" />
+                                </div>
+                        </div>
+                      </div>
+                      
+                      <div class="row">
+                        <!-- Country -->
+                        <div class="col-6">
+                                <div class="form-group">
+                                    <label>COUNTRY</label>
+                                    <input type="text" class="form-control" placeholder="Country" required="" />
+                                </div>
+                        </div>
+
+                        <!-- Zip of Postal Code -->
+                        <div class="col-6">
+                                <div class="form-group">
+                                    <label>ZIP/POSTAL CODE</label>
+                                    <input type="text" class="form-control" placeholder="Zip/Postal Code" required="" />
+                                </div>
+                        </div>
+                      </div>
                     </form>
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <button class="btn btn-primary" href="#" type="submit">Save Card</button>
+          <button class="btn btn-primary" href="#" type="submit">Charge Card</button>
         </div>
       </div>
     </div>
@@ -764,9 +897,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js" integrity="sha256-QQRUO4QtEKgzJoMMdtkBecbAQkssGCNGBnniwoShRCQ=" crossorigin="anonymous"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js" integrity="sha256-ExU5Nn6loL4heLikw79Dc3sUnDaOpg0Kox8NJWXeveQ=" crossorigin="anonymous"></script>
-    <script>
-
-</script>
 
 <script type="text/javascript" src="./js/custom.js"></script>
 

@@ -257,6 +257,7 @@ p {
 .usa{
 	color: #FF3A2E;
 }
+
 .text-white {
 	color: #ffffff !important;
 }
@@ -2199,12 +2200,12 @@ border-radius: 5px;
 }
 
 .sign-up-form{
+	width: 600px;
 	padding-left: 200px;
-	height: 447px;
 }
 
 .sign-up-content{
-	height: 449px;
+	height: 700px;
 	margin-top: 39px;
 }
 
@@ -2344,7 +2345,7 @@ border-radius: 5px;
 }
 }
 
-// workaround
+/*workaround*/
 .intl-tel-input {
   display: table-cell;
 }

@@ -1,12 +1,4 @@
- $(document).ready(function(e){
-	      $('.search-panel .dropdown-menu').find('a').click(function(e) {
-				e.preventDefault();
-				var param = $(this).attr("href").replace("#","");
-				var concept = $(this).text();
-				$('.search-panel span#search_concept').text(concept);
-				$('.input-group #search_param').val(param);
-		   	});
-	      });
+
 /* $(document).ready(function(e){
 var a = document.getElementByTagName('a').item(0);
 $(a).on('keyup', function(evt){
@@ -73,7 +65,7 @@ $("#imageUpload").change(function(){
 //Manage Cards DataTable
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
-  var actions = $(".table2 td:last-child").html();
+/*  var actions = $(".table2 td:last-child").html();
   // Append table with add row form on add new button click
     $(".add-new").click(function(){
     $(this).attr("disabled", "disabled");
@@ -117,7 +109,7 @@ $(document).ready(function(){
     });   
     $(this).parents("tr").find(".add, .edit").toggle();
     $(".add-new").attr("disabled", "disabled");
-    });
+    });*/
   // Delete row on delete button click
   $(document).on("click", ".delete", function(){
         $(this).parents("tr").remove();
@@ -214,3 +206,14 @@ $(document).ready(function(){
     window.intlTelInput(input, {
     });
  });
+
+
+ $(document).ready(function () {
+  $('.payment-method').hide();
+  $('.m1').show();
+
+  $('#select').on("change",function () {
+    $('.payment-method').hide();
+    $('.m'+$(this).val()).show();
+  }).val("1");
+});

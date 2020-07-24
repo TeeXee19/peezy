@@ -23,9 +23,6 @@
     <!-- Custom CSS -->
      <link rel="stylesheet" href="./css/style.css">
 
-     <script type="text/javascript" src="js/custom.js"></script>
-
-     <script src="js/countrypicker.js"></script>
 
      <link rel="stylesheet" type="text/css" href="./css/intlTelInput.css">
 
@@ -52,6 +49,7 @@
 	</div>
 
 	<div class="sign-up-form">
+   
 		  <form action="" class="needs-validation" method="post" role="form" novalidate>
 		     <div class="form-group">
            <label for="email">Email Address</label>
@@ -153,8 +151,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
 
-<script src="js/countrypicker.js"></script>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput-jquery.min.js" integrity="sha256-EfJSwi/WrHIzumjUmRZ25gVg2GRTTVpqkps8CNtcnLI=" crossorigin="anonymous"></script>
 
@@ -162,51 +158,14 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js" integrity="sha256-ExU5Nn6loL4heLikw79Dc3sUnDaOpg0Kox8NJWXeveQ=" crossorigin="anonymous"></script>
 
-
-    <script type="text/javascript">
-    	$(".toggle-password").click(function() {
-
-        $(this).toggleClass("ri-eye-fill ri-eye-off-fill");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") == "password") {
-          input.attr("type", "text");
-        } else {
-          input.attr("type", "password");
-        }
-      });
-    </script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="js/custom.js"></script>
 
 
-    <script>
-// Disable form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-</script>
 
 <script type="text/javascript" src="./js/intlTelInput.js"></script>
 
-<script >
-  var input = document.querySelector("#phone");
-  window.intlTelInput(input, {
 
-
-  });
-</script>
 </body>
 
 
