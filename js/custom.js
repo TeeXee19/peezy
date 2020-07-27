@@ -1,16 +1,4 @@
-
-/* $(document).ready(function(e){
-var a = document.getElementByTagName('a').item(0);
-$(a).on('keyup', function(evt){
-  console.log(evt);
-  if(evt.keycode === 13){
-    
-    alert('search?');
-  } 
-}); */
-
 // Disable form submissions if there are invalid fields
-$(document).ready(function() {
   'use strict';
   window.addEventListener('load', function() {
     // Get the forms we want to add validation styles to
@@ -26,7 +14,6 @@ $(document).ready(function() {
       }, false);
     });
   }, false);
-});
 
 
 // Call the dataTables jQuery plugin
@@ -117,25 +104,6 @@ $(document).ready(function(){
     });
 });
 
-  // Disable form submissions if there are invalid fields
-$(document).ready(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-});
-
 
 $(document).ready(function(){
      $('#btnClick').on('click',function(){
@@ -205,6 +173,7 @@ $(document).ready(function(){
     var input = document.querySelector("#phone");
     window.intlTelInput(input, {
     });
+
  });
 
 
@@ -217,3 +186,4 @@ $(document).ready(function(){
     $('.m'+$(this).val()).show();
   }).val("1");
 });
+
