@@ -1846,7 +1846,8 @@ color: #404040;
 /*Features Page*/
 
 .features-section1{
-	height: 400px;
+	height: 250px;
+
 }
 
 .features-section1 div{
@@ -1862,6 +1863,7 @@ color: #404040;
 .features-img {
 	background-image: url(../img/features-bg.png);
 	background-repeat: no-repeat;
+
 }
 
 .features-section2-content{
@@ -2440,4 +2442,82 @@ padding-top: 15px;
 @keyframes swinghair {
     0% { transform: rotate(6deg); }
     100% { transform: rotate(-6deg); }
+}
+
+/*------------------------------------*\
+    #Accordion
+\*------------------------------------*/
+/* Accordion Base */
+.accordion .card {
+	padding: 32px;
+	margin-bottom: 0;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 1px;
+	border-bottom: 1px solid #ededed;
+}
+
+.accordion .card .card-heading {
+	padding: 0;
+}
+
+.accordion .card .card-heading a {
+	font-size: 16px;
+	color: #FE9306;
+	font-weight: 600;
+	line-height: 20px;
+	text-transform: capitalize;
+	position: relative;
+	display: block;
+}
+
+.accordion .card .card-heading a.collapsed {
+	color: #282828;
+}
+
+.accordion .card .card-body {
+	padding: 22px 0 6px 0;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+/* Accordion Status */
+.accordion .card-heading .card-link:after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	content: "\F068";
+	/* symbol for "opening" cards */
+	font-family: "Font Awesome 5 Free";
+	font-size: 9px;
+	color: #ffffff;
+	background-color: #FE9306;
+	border: 1px solid #FE9306;
+	text-align: center;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+}
+
+.accordion .card-heading .card-link.collapsed:after {
+	/* symbol for "collapsed" cards */
+	background-color: transparent;
+	content: "\f067";
+	color: #282828;
+	border: none;
+}
+
+/* Accordion Style #1 */
+.accordion.accordion-1 .card-heading a {
+	padding-left: 0;
+}
+
+/* Accordion Style #2 */
+.accordion.accordion-2 .card {
+	background-color: transparent;
 }
