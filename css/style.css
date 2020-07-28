@@ -1946,7 +1946,7 @@ width: 427px;
 .features-section3 img{
 	position: absolute;
 	padding-left: 65px;
-	top: 3200px;
+	top: 3050px;
 	left: 611.667px;
 }
 
@@ -2520,4 +2520,156 @@ padding-top: 15px;
 /* Accordion Style #2 */
 .accordion.accordion-2 .card {
 	background-color: transparent;
+}
+
+.faq-content{
+	height: auto;
+}
+
+.volunteer_content{
+	justify-content: center;
+	display: grid;
+	grid-template-columns: 59% 14%;
+}
+
+.volunteer_content_sub{
+	display: grid;
+	grid-auto-flow: row;
+}
+
+.volunteer_content_sub div h4{
+	font-size: 45px;
+
+	color: #23374A;
+
+}
+
+.about_h{
+	padding-top: 0px;
+	height: 700px;
+	padding-left: 40px;
+	padding-right: 40px;
+	}
+
+
+.about_h h2{
+	padding-top: 60px;
+	padding-left: 159px;
+}
+
+.about_h img{
+	padding-left: 30px;
+}
+
+.about_h div p{
+	width: 600px;
+	height: 246px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: justify;
+	font-size: 20px;
+	line-height: 30px;
+	color: #23374A;
+	padding-left: 73px;
+	padding-top: 35px;
+}
+
+.about_h_container{
+	padding-top: 30px;
+	display: flex;	
+}
+
+@media (max-width: 320px){
+	.about_h{
+		height: 600px;
+	}
+
+	.about_h h2{
+		padding-left: 60px;
+		font-size: 30px;
+	}
+
+	.about_h img{
+	display: none;
+	}
+
+	.about_h div p{
+	width: 300px;
+	height: 246px;
+	font-size: 15px;
+	padding-left: 20px;
+	padding-top: 10px;
+	line-height: 20px;
+	text-align: justify;
+	}
+
+	.about_h_container{
+		padding-top: 0px; 
+	}
+
+}
+
+@media only screen and (min-width: 330px) and (max-width: 700px) {
+	.about_h{
+		height: 600px;
+		padding-left: 0px;
+		padding-right: 20px;
+	}
+
+.about_h img{
+	display: none;
+}
+
+.about_h div p{
+	width: 340px;
+	height: 246px;
+	font-size: 15px;
+	padding-left: 20px;
+	padding-top: 10px;
+	line-height: 20px;
+	text-align: justify;
+}
+
+.about_h_container{
+	padding-top: 0px; 
+}
+}
+
+@media only screen and (min-width: 710px) and (max-width: 1200px) {
+	.about_h{
+		height: 600px;
+	}
+.about_h h2{
+	padding-left: 60px;
+	font-size: 30px;
+}
+
+.about_h img{
+	padding-left: 0px; 
+}
+
+.about_h div p{
+	width: 450px;
+	height: 246px;
+	font-size: 19px;
+	padding-left: 38px;
+	padding-top: 15px;
+	line-height: 19px;
+	text-align: justify;
+}
+
+.about_h_container{
+	padding-top: 0px; 
+	justify-content: center;
+}
+
+
+
+}
+
+@media only screen and (min-width: 1022px) and (max-width: 1024px){
+	.about_h img{
+	padding-left: 0px; 
+	}
+
 }
