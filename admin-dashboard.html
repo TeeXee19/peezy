@@ -45,54 +45,72 @@
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active border-right-primary">
         <a class="nav-link" href="admin-dashboard.html">
-          <i class="ri-fw ri-home-8-line"></i>
+          <i class="ri-fw ri-dashboard-fill"></i>
           <span>Dashboard</span></a>
       </li>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link " href="phonebook.html" >
-          <i class="ri-book-2-line"></i>
-          <span>Phonebook</span>
-        </a>
-      </li>
-
-      <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
         <a class="nav-link " href="#" >
-           <i class="ri-fw ri-phone-line"></i>
-          <span>Call History</span>
+          <i class="ri-group-fill"></i>
+          <span>Customers</span>
         </a>
       </li>
 
-      <!-- Nav Item - Pages Collapse Menu -->
+      <!-- Nav Item - Tools -->
       <li class="nav-item">
-        <a class="nav-link " href="payment.html" >
-          <i class="ri-fw ri-bank-card-line"></i>
-          <span>Peezy Payments</span>
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTools" aria-expanded="true" aria-controls="collapseTools">    
+           <i class="ri-fw ri-tools-fill"></i>
+          <span>Tools</span>
         </a>
+        <div id="collapseTools" class="collapse" aria-labelledby="headingTools" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#">Blocked IP</a>
+            <a class="collapse-item" href="#">Phone Verification</a>
+          </div>
+        </div>
       </li>
 
-      <!-- Nav Item - Charts -->
+      <!-- Nav Item - Fraud Control -->
       <li class="nav-item">
-        <a class="nav-link" href="gift-certificate.html">
-           <i class="ri-fw ri-gift-2-line"></i>
-          <span>Gift Certificates</span></a>
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFraud" aria-expanded="true" aria-controls="collapseFraud">    
+        <i class="ri-fw ri-shield-star-fill"></i>
+          <span>Fraud Controls</span>
+        </a>
+        <div id="collapseFraud" class="collapse" aria-labelledby="headingFraud" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="blocked-ip.html">Blocked IP</a>
+            <a class="collapse-item" href="phone-verification.html">Phone Verification</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReport" aria-expanded="true" aria-controls="collapseReport">
+          <i class="ri-fw ri-survey-fill"></i>
+          <span>Report</span>
+        </a>
+        <div id="collapseReport" class="collapse" aria-labelledby="headingReport" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#">Quick Report</a>
+            <a class="collapse-item" href="#">Gift Report</a>
+          </div>
+        </div>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="ri-fw ri-star-line"></i>
-          <span>Peezy Rewards</span></a>
+        <a class="nav-link" href="#">
+          <i class="ri-fw ri-shield-user-fill"></i>
+          <span>Security Log</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
           <i class="fas fa-fw fa-users"></i>
           <span>Manage Users</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapseUser" class="collapse" aria-labelledby="headingUser" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="create-users.html">Create Users</a>
             <a class="collapse-item" href="view-users.html">View Users</a>

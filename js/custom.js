@@ -20,6 +20,9 @@
 $(document).ready(function() {
   $('#dataTable').DataTable(
     );
+
+  $('#dataTable2').DataTable(
+    );
 });
 
 
@@ -52,16 +55,14 @@ $("#imageUpload").change(function(){
 //Manage Cards DataTable
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
-/*  var actions = $(".table2 td:last-child").html();
+  var actions = $(".table2 td:last-child").html();
   // Append table with add row form on add new button click
     $(".add-new").click(function(){
     $(this).attr("disabled", "disabled");
     var index = $(".table2 tbody tr:last-child").index();
         var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="name" id="name"></td>' +
-            '<td><input type="text" class="form-control" name="email" id="email"></td>' +
-            '<td><input type="text" class="form-control" name="address" id="address"></td>' +
-            '<td><input type="text" class="form-control" name="phone" id="phone"></td>' +
+            '<td><input type="date" class="form-control" name="date" id="date"></td>' +
+            '<td><input type="text" class="form-control" name="ip" id="ip"></td>' +
       '<td>' + actions + '</td>' +
         '</tr>';
       $(".table2").append(row);   
@@ -96,7 +97,7 @@ $(document).ready(function(){
     });   
     $(this).parents("tr").find(".add, .edit").toggle();
     $(".add-new").attr("disabled", "disabled");
-    });*/
+    });
   // Delete row on delete button click
   $(document).on("click", ".delete", function(){
         $(this).parents("tr").remove();
@@ -104,6 +105,10 @@ $(document).ready(function(){
     });
 });
 
+
+$(document).on("click", ".delete-card", function(){
+        $(this).parents("tr").remove();
+ });
 
 $(document).ready(function(){
      $('#btnClick').on('click',function(){
@@ -187,3 +192,20 @@ $(document).ready(function(){
   }).val("1");
 });
 
+// Hide Report Div
+$(document).ready(function(){
+   $('.report').hide();
+  $('#dataTable2').DataTable(
+    );
+  $('#dataTable3').DataTable(
+    );
+     $('#dataTable4').DataTable(
+    );
+ });
+
+function toggle(reportTab){
+   $('.report').hide();
+  $(reportTab).show();
+ 
+}
+// Hide Report Div End

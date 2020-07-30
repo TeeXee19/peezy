@@ -11394,6 +11394,20 @@ body.sidebar-toggled footer.sticky-footer {
   .table-title .add-new i {
     margin-right: 4px;
   }
+
+  .table-title .add-new-card {
+        float: right;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: none;
+    min-width: 100px;
+    border-radius: 50px;
+    line-height: 13px;
+    }
+  .table-title .add-new-card i {
+    margin-right: 4px;
+  }
     table.table2 {
         table-layout: fixed;
     }
@@ -11423,6 +11437,9 @@ body.sidebar-toggled footer.sticky-footer {
     table.table td a.delete {
         color: #E34724;
     }
+    table.table td a.delete-card {
+        color: #E34724;
+    }
     table.table td i {
         font-size: 19px;
     }
@@ -11444,3 +11461,7 @@ body.sidebar-toggled footer.sticky-footer {
   table.table td .add {
     display: none;
   }
+
+  table.table td{
+    width: max-content;
+    }
