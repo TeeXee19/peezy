@@ -257,7 +257,7 @@
                 <div class="card-header d-flex flex-row align-items-center justify-content-between">
                     <h4 >User Profile</h4>
                       
-                    <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#editModal"><i class="ri-1x ri-edit-2-fill"></i>Edit Profile</button>
+                    <button class="btn btn-primary pull-right" id="editButton"><i class="ri-1x ri-edit-2-fill"></i>Edit Profile</button>
                   </div>
                 <!-- Card Body -->
                 <div class="card-body">
@@ -273,7 +273,7 @@
                        <div class="col-md-6  mb-0">
                          <label for="f-name" class="profile-account-header">First Name</label>
                          <div class="form-group">
-                            <input type="text" id="user-profile-f-name" class="form-control" name="UserProfile[f-name]" value="Frank" disabled="true">
+                            <input type="text" id="user-profile-f-name" class="form-control adminProfile" name="UserProfile[f-name]" value="Frank" disabled="true">
                          </div>   
                        </div>
                       
@@ -281,7 +281,7 @@
                       <div class="col-md-6 mb-0">
                                    <label for="l-name" class="profile-account-header">Last Name</label>
                                    <div class="form-group">
-                                      <input type="text" id="user-profile-l-name" class="form-control" name="UserProfile[l-name]" disabled="true" value="Queen">
+                                      <input type="text" id="user-profile-l-name" class="form-control adminProfile" name="UserProfile[l-name]" disabled="true" value="Queen">
                                    </div>   
                        </div>
                      </div>
@@ -290,13 +290,13 @@
                        <div class="col-md-6 mb-0">
                          <label for="email" class="profile-account-header">Email</label>
                          <div class="form-group">
-                            <input type="email" id="user-profile-email" class="form-control" name="UserProfile[email]" value="frankqueen@thm.com" disabled="true">
+                            <input type="email" id="user-profile-email" class="form-control adminProfile" name="UserProfile[email]" value="frankqueen@thm.com" disabled="true">
                          </div>   
                        </div>
                        <div class="col-md-6 mb-0">
                          <label for="zipCode" class="profile-account-header">Username</label>
                          <div class="form-group">
-                            <input type="text" id="user-profile-zipCode" class="form-control" name="UserProfile[zipCode]" value="fqueen" disabled="true">
+                            <input type="text" id="user-profile-zipCode" class="form-control adminProfile" name="UserProfile[zipCode]" value="fqueen" disabled="true">
                          </div>   
                        </div>
                      </div>  

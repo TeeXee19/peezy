@@ -207,5 +207,14 @@ function toggle(reportTab){
    $('.report').hide();
   $(reportTab).show();
  
-}
+};
 // Hide Report Div End
+
+$(document).ready(function(){
+ $('#editButton').click(function(){
+        $('.adminProfile').prop('disabled', 
+           function (i, val) {
+        return !val;
+    });
+  }); 
+});
