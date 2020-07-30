@@ -11427,6 +11427,10 @@ body.sidebar-toggled footer.sticky-footer {
         display: inline-block;
         margin: 0 5px;
     min-width: 24px;
+    }   
+
+    table.table2 td  {
+    font-size: 15px;
     }    
   table.table td a.add {
         color: #27C46B;
