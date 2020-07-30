@@ -11307,6 +11307,10 @@ body.sidebar-toggled footer.sticky-footer {
   height: 620px;
 }
 
+.admin-profile{
+  height: 500px;
+}
+
 .edit-profile-img {
   position: absolute;
   transform: translate(-110%, 240%);

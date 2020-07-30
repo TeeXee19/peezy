@@ -76,20 +76,20 @@
       </li>
 
       <!-- Nav Item - Fraud Control -->
-      <li class="nav-item active border-right-primary">
+      <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFraud" aria-expanded="true" aria-controls="collapseFraud">    
         <i class="ri-fw ri-shield-star-fill"></i>
           <span>Fraud Controls</span>
         </a>
         <div id="collapseFraud" class="collapse" aria-labelledby="headingFraud" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item active" href="blocked-ip.html">Blocked IP</a>
+            <a class="collapse-item" href="blocked-ip.html">Blocked IP</a>
             <a class="collapse-item" href="phone-verification.html">Phone Verification</a>
           </div>
         </div>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item ">
         <a class="nav-link collapsed" href="report.html" data-toggle="collapse" data-target="#collapseReport" aria-expanded="true" aria-controls="collapseReport">
           <i class="ri-fw ri-survey-fill"></i>
           <span>Report</span>
@@ -126,8 +126,8 @@
       <hr class="sidebar-divider">
 
  <!-- Nav Item - Tables -->
-      <li class="nav-item admin-profile.html">
-        <a class="nav-link" href="profile-management.html">
+      <li class="nav-item active">
+        <a class="nav-link" href="admin-profile.html">
           <i class="ri-fw ri-user-settings-line"></i>
           <span>Profile Management</span></a>
       </li>
@@ -250,54 +250,70 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-          <div class="card shadow mb-4">
-             <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between table-title">
-                  <h4 class="m-0 font-weight-normal ">Blocked IP</h4>
-                  <div class="pull-right">
-                        <button type="button" class="btn btn-success add-new"><i class="fa fa-plus"></i> Add New</button>
-                  </div> 
-                </div>
-                  <!-- Card Body -->
-            <div class="card-body">
-            <div class="table-responsive">
-            <table class="table table2 table-bordered" id="dataTable">
 
-                <thead>
-                        <th>Date Added</th>
-                        <th>IP Address</th>
-                        <th>Actions</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>12/04/2020 23:34:32</td>
-                        <td>212.10.168.143</td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>23/10/2019</td>
-                        <td>172.129.69.200</td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>23/10/2019</td>
-                        <td>172.129.69.200</td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>     
-                </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+            <!-- Area Chart -->
+            <div class="col-xl-6 col-lg-6">
+              <div class="card shadow mb-4 admin-profile">
+                <div class="card-header d-flex flex-row align-items-center justify-content-between">
+                    <h4 >User Profile</h4>
+                      
+                    <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#editModal"><i class="ri-1x ri-edit-2-fill"></i>Edit Profile</button>
+                  </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  
+                  <center>
+                    <img class="rounded-circle z-depth-2 profile-pic" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" data-holder-rendered="true" id="profileImage">
+                    <button class="btn edit-profile-img"><i id="uploadImage" class="ri-camera-fill upload-button"></i><input id="imageUpload" type="file" 
+       name="profile_photo" capture></button>
+                  </center>
+                  <div>
+                    <form class="mt-1">
+                      <div class="row">
+                       <div class="col-md-6  mb-0">
+                         <label for="f-name" class="profile-account-header">First Name</label>
+                         <div class="form-group">
+                            <input type="text" id="user-profile-f-name" class="form-control" name="UserProfile[f-name]" value="Frank" disabled="true">
+                         </div>   
+                       </div>
+                      
+           
+                      <div class="col-md-6 mb-0">
+                                   <label for="l-name" class="profile-account-header">Last Name</label>
+                                   <div class="form-group">
+                                      <input type="text" id="user-profile-l-name" class="form-control" name="UserProfile[l-name]" disabled="true" value="Queen">
+                                   </div>   
+                       </div>
+                     </div>
+
+                     <div class="row">
+                       <div class="col-md-6 mb-0">
+                         <label for="email" class="profile-account-header">Email</label>
+                         <div class="form-group">
+                            <input type="email" id="user-profile-email" class="form-control" name="UserProfile[email]" value="frankqueen@thm.com" disabled="true">
+                         </div>   
+                       </div>
+                       <div class="col-md-6 mb-0">
+                         <label for="zipCode" class="profile-account-header">Username</label>
+                         <div class="form-group">
+                            <input type="text" id="user-profile-zipCode" class="form-control" name="UserProfile[zipCode]" value="fqueen" disabled="true">
+                         </div>   
+                       </div>
+                     </div>  
+
+                     <div class="mb-0">
+                         <label for="zipCode" class="profile-account-header">Role</label>
+                         <div class="form-group">
+                            <input type="text" id="user-profile-zipCode" class="form-control" name="UserProfile[zipCode]" value="Admin" disabled="true">
+                         </div>   
+                       </div>                   
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
         </div>
         <!-- /.container-fluid -->
 
@@ -354,7 +370,7 @@
 
 
   <!-- Page level plugins -->
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/jquery.dataTables.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
   <!-- Custom scripts for all pages-->
@@ -364,3 +380,4 @@
 </body>
 
 </html>
+
