@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title> Admin Peezy - Dashboard</title>
+  <title> Admin Peezy - Changed Emails</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -20,9 +20,8 @@
 
   <link href="remixicon/remixicon.css" rel="stylesheet">
 
-  <!-- Custom styles for this page -->
+    <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
 </head>
@@ -45,7 +44,7 @@
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
-
+ 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item ">
         <a class="nav-link" href="admin-dashboard.html">
@@ -62,35 +61,35 @@
       </li>
 
       <!-- Nav Item - Tools -->
-      <li class="nav-item ">
+      <li class="nav-item active border-right-primary">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTools" aria-expanded="true" aria-controls="collapseTools">    
            <i class="ri-fw ri-tools-fill"></i>
           <span>Tools</span>
         </a>
-        <div id="collapseTools" class="collapse" aria-labelledby="headingTools" data-parent="#accordionSidebar">
+        <div id="collapseTools" class="collapse show" aria-labelledby="headingTools" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="changed-emails.html">Changed Email</a>
-            <a class="collapse-item" href="blocked-emails.html">blocked-emails.html</a>
+            <a class="collapse-item active" href="change-emails.html">Change Email</a>
+            <a class="collapse-item" href="blocked-emails.html">Blocked Emails</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Fraud Control -->
-      <li class="nav-item active border-right-primary">
+      <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFraud" aria-expanded="true" aria-controls="collapseFraud">    
         <i class="ri-fw ri-shield-star-fill"></i>
           <span>Fraud Controls</span>
         </a>
-        <div id="collapseFraud" class="collapse show" aria-labelledby="headingFraud" data-parent="#accordionSidebar">
+        <div id="collapseFraud" class="collapse" aria-labelledby="headingFraud" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item active" href="blocked-ip.html">Blocked IP</a>
+            <a class="collapse-item" href="blocked-ip.html">Blocked IP</a>
             <a class="collapse-item" href="phone-verification.html">Phone Verification</a>
           </div>
         </div>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="report.html" data-toggle="collapse" data-target="#collapseReport" aria-expanded="true" aria-controls="collapseReport">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReport" aria-expanded="true" aria-controls="collapseReport">
           <i class="ri-fw ri-survey-fill"></i>
           <span>Report</span>
         </a>
@@ -109,12 +108,13 @@
           <span>Security Log</span></a>
       </li>
 
+
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-users"></i>
           <span>Manage Users</span>
         </a>
-        <div id="collapseUser" class="collapse" aria-labelledby="headingUser" data-parent="#accordionSidebar">
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="create-users.html">Create Users</a>
             <a class="collapse-item" href="view-users.html">View Users</a>
@@ -126,8 +126,8 @@
       <hr class="sidebar-divider">
 
  <!-- Nav Item - Tables -->
-      <li class="nav-item admin-profile.html">
-        <a class="nav-link" href="profile-management.html">
+      <li class="nav-item">
+        <a class="nav-link" href="admin-profile.html">
           <i class="ri-fw ri-user-settings-line"></i>
           <span>Profile Management</span></a>
       </li>
@@ -157,7 +157,7 @@
           
               <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Admin Dashboard</h1>
+            <h1 class="h3 mb-0 text-gray-800">Admin Dashboard | Changed Emails</h1>
           </div>
           
           <!-- Topbar Navbar -->
@@ -250,54 +250,101 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-          <div class="card shadow mb-4">
-             <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between table-title">
-                  <h4 class="m-0 font-weight-normal ">Blocked IP</h4>
+    
+
+          <!-- Content Row -->
+
+
+            <!-- Area Chart -->
+            <div >
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 text-lg font-weight-bold text-success">Change Email</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <form action="" class="needs-validation" method="post" role="form" novalidate>
+                    <div class="row">
+                      <div class="col-6 form-group">
+                        <input class="input-group form-control" type="text" name="accountId" id="accountId" autofocus placeholder="Account ID" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                      </div>
+
+                    <div class="col-6 form-group">
+                      <input type="email" class="form-control" id="email" name="email" autofocus placeholder="Email" required>
+                      <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                  </div>
+                   <hr>
+
+                  <div class="row float-right">
+                  <button type="submit" class="btn btn-success ml-1">Change Email</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+            <hr class="bg-peezy">
+
+            <!-- Customer Report -->
+          <div >
+           <!-- Card Header - Dropdown -->
+             <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h4 class="m-0 font-weight-normal ">Customer Report</h4>
                   <div class="pull-right">
-                        <button type="button" class="btn btn-success add-new"><i class="fa fa-plus"></i> Add New</button>
+                    <a href="#" class="btn btn-sm btn-primary shadow-sm ml-1"><i class="fas fa-download fa-sm text-white-50"></i> Download Report</a>
                   </div> 
                 </div>
-                  <!-- Card Body -->
+            <!-- Card Body - Customer Report -->
             <div class="card-body">
-            <div class="table-responsive">
             <table class="table table2 table-bordered" id="dataTable">
 
                 <thead>
-                        <th>Date Added</th>
-                        <th>IP Address</th>
-                        <th>Actions</th>
+                        <th>Account ID</th>
+                        <th>Old Email</th>
+                        <th>New Email</th>
+                        <th >Change Type</th>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>12/04/2020 23:34:32</td>
-                        <td>212.10.168.143</td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
+                        <td>2345456098</td>
+                        <td>jbarbera@peezy.com</td>
+                        <td>edoubra@peezy.com</td>
+                        <td >1</td>
                     </tr>
                     <tr>
-                        <td>23/10/2019</td>
-                        <td>172.129.69.200</td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
+                        <td>21340857234</td>
+                        <td>cchigbo@peezy.com</td>
+                        <td>oebinama@peezy.com</td>
+                        <td >1</td>
                     </tr>
                     <tr>
-                        <td>23/10/2019</td>
-                        <td>172.129.69.200</td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>     
+                        <td>20948765423</td>
+                        <td>jemelone@peezy.com</td>
+                        <td>nnwokoro@peezy.com</td>
+                        <td >1</td>
+                    </tr>
+                    <tr>
+                        <td>1309484290</td>
+                        <td>eonurike@peezy.com</td>
+                        <td>oonochie-okeke@peezy.com</td>
+                        <td >1</td>
+                    </tr>
+                     
                 </tbody>
             </table>
-          </div>
         </div>
-      </div>
+        </div>
+        </div>
+
+
+
+
         </div>
         <!-- /.container-fluid -->
 
@@ -344,17 +391,34 @@
     </div>
   </div>
 
+  <!-- Cancel Create Modal-->
+  <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">Are You Sure?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Yes" below if you are no longer want to create the user.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">NO</button>
+          <a class="btn btn-primary" href="view-users.html">YES</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="vendor/chart.js/Chart.min.js"></script>
 
-
-  <!-- Page level plugins -->
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+   <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
   <!-- Custom scripts for all pages-->

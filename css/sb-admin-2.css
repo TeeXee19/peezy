@@ -6486,6 +6486,13 @@ button.bg-dark:focus {
 
 .bg-white {
   background-color: #fff !important;
+
+}
+
+.bg-peezy{
+  background-color: #FE9306 !important;
+    border: 1px solid #FE9306 !important;
+
 }
 
 .bg-transparent {
