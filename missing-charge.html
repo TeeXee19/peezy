@@ -9,20 +9,20 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title> Admin Peezy - Users</title>
+  <title> Admin Peezy - Tools</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.css" rel="stylesheet">
 
   <link href="remixicon/remixicon.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
 
@@ -46,7 +46,7 @@
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
-
+ 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item ">
         <a class="nav-link" href="admin-dashboard.html">
@@ -63,18 +63,18 @@
       </li>
 
       <!-- Nav Item - Tools -->
-      <li class="nav-item">
+      <li class="nav-item active border-right-primary">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTools" aria-expanded="true" aria-controls="collapseTools">    
            <i class="ri-fw ri-tools-fill"></i>
           <span>Tools</span>
         </a>
-        <div id="collapseTools" class="collapse" aria-labelledby="headingTools" data-parent="#accordionSidebar">
+        <div id="collapseTools" class="collapse show" aria-labelledby="headingTools" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="changed-emails.html">Changed Email</a>
-            <a class="collapse-item" href="blocked-emails.html">Blocked Email Pattern</a>
+            <a class="collapse-item" href="change-emails.html">Change Email</a>
+            <a class="collapse-item " href="blocked-emails.html">Blocked Email Pattern</a>
             <a class="collapse-item" href="blocked-emails.html">Email Affiliate</a>
             <a class="collapse-item" href="blocked-emails.html">Change Account No.</a>
-            <a class="collapse-item" href="missing-charge.html">Missing Charge</a>
+            <a class="collapse-item active" href="missing-charge.html">Missing Charge</a>
           </div>
         </div>
       </li>
@@ -100,7 +100,7 @@
         </a>
         <div id="collapseReport" class="collapse" aria-labelledby="headingReport" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="report">Quick Report</a>
+            <a class="collapse-item" href="report.html">Quick Report</a>
             <a class="collapse-item" href="#">Gift Report</a>
           </div>
         </div>
@@ -113,16 +113,17 @@
           <span>Security Log</span></a>
       </li>
 
-      <li class="nav-item active border-right-primary">
+
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-users"></i>
           <span>Manage Users</span>
         </a>
-        <div id="collapseUtilities" class="collapse show" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item " href="create-users.html">Create Users</a>
-            <a class="collapse-item " href="view-users.html">View Users</a>
-            <a class="collapse-item active" href="deactivated-users.html">Deactivated Users</a>
+            <a class="collapse-item" href="create-users.html">Create Users</a>
+            <a class="collapse-item" href="view-users.html">View Users</a>
+            <a class="collapse-item" href="deactivated-users.html">Deactivated Users</a>
           </div>
         </div>
       </li>
@@ -161,7 +162,7 @@
           
               <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Admin Dashboard | User Management (Deactivated Users) </h1>
+            <h1 class="h3 mb-0 text-gray-800">Tools | Missing Charge</h1>
           </div>
           
           <!-- Topbar Navbar -->
@@ -252,124 +253,34 @@
         </nav>
         <!-- End of Topbar -->
 
+       
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-    
-
-          <!-- Content Row -->
-            <div >
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h5 class="m-0 font-weight-normal ">Inactive Users</h5>
-
+          <center >
+           <div class="col-xl-6 col-md-6 h-100">
+                <div class="shadow bg-white py-2">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <center>
+                          <div  class="pt-3"><p class="font-weight-bold text-lg text-danger">There is no system to stop duplicates, please confirm on CDR before you apply the balance,
+                           <br> 
+                           You cannot set the amount, the system will set the amount based on the transaction amount <p>
+                          </div>
+                            <form action="" method="POST" class="pt-2">
+                                <div class="form-group col-10 row">
+                                  <input type="text" class="form-control input-group col-7" name="missingCharge" autofocus placeholder="Confirmation Number" required>
+                                  <button class="btn btn-primary col-4 ml-1">Submit</button>
+                                </div>
+                            </form>    
+                        </center>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <!-- Card Body -->
-                <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>Full Name</th>
-                      <th>Username</th>
-                      <th>Email</th>
-                      <th>Role</th>
-                      <th>Date Created</th>
-                      <th>Date Deactiviated</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                      <th>Full Name</th>
-                      <th>Username</th>
-                      <th>Email</th>
-                      <th>Role</th>
-                      <th>Date Created</th>
-                      <th>Date Deactivated</th>
-                      <th>Action</th>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                    <tr>
-                      <td>Chuck Jones</td>
-                      <td>cjones</td>
-                      <td>cjones@peezy.com</td>
-                      <td>Super Admin</td>
-                      <td>12/04/2020</td>
-                      <td>12/12/2020</td>
-                      <td>
-                        <div class="dropdown mb-4">
-                          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Action
-                          </button>
-                          <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item text-success" href="#" title="Activate" data-toggle="tooltip"><i class="material-icons">library_add_check</i>Activate</a> 
-                          </div>
-                          </div>
-                      </td>
-                    </tr><tr>
-                      <td>Scooby Doo</td>
-                      <td>sdoo</td>
-                      <td>sdoo@peezy.com</td>
-                      <td>Support</td>
-                      <td>13/11/2020</td>
-                      <td>13/06/2021</td>
-                      <td>
-                        <div class="dropdown mb-4">
-                          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Action
-                          </button>
-                          <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item text-success" href="#" title="Activate" data-toggle="tooltip"><i class="material-icons">library_add_check</i>Activate</a> 
-                          </div>
-                          </div>
-                      </td>
-                    </tr><tr>
-                      <td>Fred Quimby</td>
-                      <td>fquimby</td>
-                      <td>fquimby@peezy.com</td>
-                      <td>Admin</td>
-                      <td>23/07/2020</td>
-                      <td>23/01/2021</td>
-                      <td>
-                        <div class="dropdown mb-4">
-                          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Action
-                          </button>
-                          <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item text-success" href="#" title="Activate" data-toggle="tooltip"><i class="material-icons">library_add_check</i>Activate</a> 
-                          </div>
-                          </div>
-                      </td>
-                    </tr><tr>
-                      <td>Donald Duck</td>
-                      <td>dduck</td>
-                      <td>dduck@peezy.com</td>
-                      <td>Admin</td>
-                      <td>21/06/2020</td>
-                      <td>21/09/2021</td>
-                      <td>
-                        <div class="dropdown mb-4">
-                          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Action
-                          </button>
-                          <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item " href="#" title="Activate" data-toggle="tooltip"><i class="material-icons">&#xE872;</i>Activate</a> 
-                          </div>
-                          </div>
-                      </td>
-                    </tr>
-                    
-                  </tbody>
-                </table>
               </div>
-            </div>
-              </div>
-            </div>
-
-
+          </center>
         </div>
         <!-- /.container-fluid -->
 
@@ -416,88 +327,6 @@
     </div>
   </div>
 
-  <!-- Cancel Create Modal-->
-  <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="ModalLabel">Are You Sure?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Yes" below if you are no longer want to create the user.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">NO</button>
-          <a class="btn btn-primary" href="view-users.html">YES</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card Modal-->
-  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Edit User</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">              
-                    <form role="form" class="need-validation" novalidate>
-
-                        <!-- Email -->
-                        <div class="col-xs-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="haha@peezy.com" disabled />
-                                </div>
-                        </div>
-
-                        <!-- First Name -->
-                        <div class="col-xs-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name" />
-                                </div>
-                        </div>
-
-                        <!-- Last Name  -->
-                        <div class="col-xs-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name" required/>
-                                </div>
-                        </div>
-
-                        <!-- Username -->
-                        <div class="col-xs-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Username" disabled />
-                                </div>
-                        </div>
-
-                        <!-- State/Province -->
-                        <div class="col-xs-12">
-                                <div class="form-group">
-                                  <select class="custom-select form-control" id="role" required>
-                                    <option selected>Choose Role</option>
-                                    <option value="1">Super Admin</option>
-                                    <option value="2">Admin</option>
-                                    <option value="3">Support</option>
-                                  </select>                               
-                                </div>
-                        </div>
-                    </form>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <button class="btn btn-primary" href="#" type="submit">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -505,7 +334,7 @@
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- datatable plugins -->
+   <!-- Page level plugins -->
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
