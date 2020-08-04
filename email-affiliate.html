@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title> Admin Peezy - Users</title>
+  <title> Admin Peezy - Tools</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,6 +19,11 @@
   <link href="css/sb-admin-2.css" rel="stylesheet">
 
   <link href="remixicon/remixicon.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 
 
 </head>
@@ -58,17 +63,16 @@
       </li>
 
       <!-- Nav Item - Tools -->
-      <li class="nav-item">
+      <li class="nav-item active border-right-primary">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTools" aria-expanded="true" aria-controls="collapseTools">    
            <i class="ri-fw ri-tools-fill"></i>
           <span>Tools</span>
         </a>
-        <div id="collapseTools" class="collapse" aria-labelledby="headingTools" data-parent="#accordionSidebar">
+        <div id="collapseTools" class="collapse show" aria-labelledby="headingTools" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="changed-emails.html">Changed Email</a>
+            <a class="collapse-item" href="change-emails.html">Change Email</a>
             <a class="collapse-item" href="blocked-emails.html">Blocked Email Pattern</a>
-            <a class="collapse-item" href="email-affiliate.html">Email Affiliate</a>
-
+            <a class="collapse-item active" href="email-affiliate.html">Email Affiliate</a>
             <a class="collapse-item" href="change-account-no.html">Change Account No.</a>
 
             <a class="collapse-item" href="missing-charge.html">Missing Charge</a>
@@ -84,7 +88,7 @@
         </a>
         <div id="collapseFraud" class="collapse" aria-labelledby="headingFraud" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="blocked-ip">Blocked IP</a>
+            <a class="collapse-item" href="blocked-ip.html">Blocked IP</a>
             <a class="collapse-item" href="phone-verification.html">Phone Verification</a>
           </div>
         </div>
@@ -111,14 +115,14 @@
       </li>
 
 
-      <li class="nav-item active border-right-primary">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-users"></i>
           <span>Manage Users</span>
         </a>
-        <div id="collapseUtilities" class="collapse show" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item active" href="create-users.html">Create Users</a>
+            <a class="collapse-item" href="create-users.html">Create Users</a>
             <a class="collapse-item" href="view-users.html">View Users</a>
             <a class="collapse-item" href="deactivated-users.html">Deactivated Users</a>
           </div>
@@ -159,7 +163,7 @@
           
               <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Admin Dashboard | User Management (Create User)</h1>
+            <h1 class="h3 mb-0 text-gray-800">Tools | Email Affiliate</h1>
           </div>
           
           <!-- Topbar Navbar -->
@@ -250,75 +254,86 @@
         </nav>
         <!-- End of Topbar -->
 
+       
         <!-- Begin Page Content -->
         <div class="container-fluid">
-    
 
-          <!-- Content Row -->
-
-
-            <!-- Area Chart -->
-            <div class="col-xl-12 col-lg-12">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
+                  <!-- Customer Report -->
+          <div >
+           <!-- Card Header - Dropdown -->
+             <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 text-lg font-weight-bold text-success">Create User</h6>
+                  <h4 class="m-0 font-weight-normal ">Email Affiliate</h4>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-sm btn-primary shadow-sm ml-1"><i class="fas fa-download fa-sm text-white-50"></i> Download Report</a>
+                  </div> 
                 </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <form action="" class="needs-validation" method="post" role="form" novalidate>
-                    <div class="row">
-                      <div class="col-6 form-group">
-                        <input class="input-group form-control" type="text" name="firstName" id="fName" autofocus placeholder="First Name" required>
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
-                      </div>
+            <!-- Card Body - Customer Report -->
+            <div class="card-body">
+            <table class="table table-bordered" id="dataTable">
 
-                      <div class="col-6 form-group">
-                        <input type="text" class="form-control" name="lastName" id="lName" autofocus placeholder="Last Name" required>
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
-                      </div>
-
-                    </div>
-
-                    <div class="row">
-                      <div class="col-6 form-group">
-                        <input class="input-group form-control" type="text" name="username" id="fName" autofocus placeholder="Username" required>
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
-                      </div>
-
-                      <div class="col-6 form-group">
-                        <select class="custom-select form-control" id="role" required>
-                              <option selected>Choose Role</option>
-                              <option value="1">Super Admin</option>
-                              <option value="2">Admin</option>
-                              <option value="3">Support</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                    <div class="col-6 form-group">
-                      <input type="email" class="form-control" id="email" name="email" autofocus placeholder="Email" required>
-                      <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please fill out this field.</div>
-                    </div>
-                  </div>
-                   <hr>
-
-                  <div class="row float-right">
-                  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#cancelModal"> Cancel</button>
-                  <button type="submit" class="btn btn-success ml-1"> Create</button>
-                  </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-
-
+                <thead>
+                        <th>Date Registered</th>
+                        <th>Referree Name</th>
+                        <th>Referree Email</th>
+                        <th>Referrer Name</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Barbara Jones</td>
+                        <td>bjones@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>15/06/2010 12:01:32</td>
+                        <td>Geogre Jungle</td>
+                        <td>gjungle@peezy.com</td>
+                        <td >Ursler City</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Fred Flinstone</td>
+                        <td>fflinstone@peezy.com</td>
+                        <td >Burney Rubble</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Betty Rubble</td>
+                        <td>brubble@peezy.com</td>
+                        <td >Wilma Flinstone</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Gomez Addams</td>
+                        <td>gaddams@peezy.com</td>
+                        <td >Fester Addams</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Eva Kant</td>
+                        <td>ekant@peezy.com</td>
+                        <td >Diabolik</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Ororo Monroe</td>
+                        <td>omonroe@peezy.com</td>
+                        <td >Jubilation Lee</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Charles Xavier</td>
+                        <td>cxavier@peezy.com</td>
+                        <td >Henry McCoy</td>
+                    </tr>
+                    
+                     
+                </tbody>
+            </table>
+        </div>
+        </div>
+        </div>
         </div>
         <!-- /.container-fluid -->
 
@@ -365,25 +380,6 @@
     </div>
   </div>
 
-  <!-- Cancel Create Modal-->
-  <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="ModalLabel">Are You Sure?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Yes" below if you are no longer want to create the user.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">NO</button>
-          <a class="btn btn-primary" href="view-users.html">YES</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -391,6 +387,9 @@
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+   <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
