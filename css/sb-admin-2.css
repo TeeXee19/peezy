@@ -11480,3 +11480,9 @@ body.sidebar-toggled footer.sticky-footer {
   table.table td{
     width: max-content;
     }
+
+  .pincode {
+        text-security: disc;
+        -webkit-text-security: disc;
+        -moz-text-security: disc;
+    }
