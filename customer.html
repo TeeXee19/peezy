@@ -247,8 +247,7 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
-         
+        <div class="container-fluid" id="1">     
               <!-- Customer Report -->
           <div >
            <!-- Card Header - Dropdown -->
@@ -285,12 +284,17 @@
                               Action
                             </button>
                             <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item text-theme" href="#" title="Edit" data-toggle="modal" data-target="#editModal"><i class="material-icons">visibility</i>View</a>
-                              <a class="dropdown-item delete" href="#" title="Deactivate" data-toggle="tooltip"><i class="material-icons">remove_circle</i>Deactivate</a> 
+                              <a class="dropdown-item text-theme font-weight-bold" href="#" title="Edit" id="btnClick"><i class="material-icons">visibility</i> View</a>
+                              <a class="dropdown-item text-info font-weight-bold" href="#" title="Reset" data-toggle="modal" data-target="#setPinModal"><i class="material-icons">refresh</i> Reset PIN</a>
+                              <a class="dropdown-item text-secondary font-weight-bold" href="#" title="Reset" data-toggle="modal" data-target="#setPasswordModal"><i class="material-icons">refresh</i> Reset Password</a>
+                              <a class="dropdown-item text-success font-weight-bold" href="#" title="Reset" data-toggle="modal" data-target="#rechargeAccount"><i class="material-icons">payment</i> Recharge Account</a>
+                              <a class="dropdown-item delete font-weight-bold" href="#" title="Deactivate" data-toggle="tooltip"><i class="material-icons">remove_circle</i> Deactivate</a> 
                             </div>
                           </div>
                         </td>
-                    </tr><tr>
+                    </tr>
+
+                    <tr>
                         <td>Joseph Barbera</td>
                         <td >jbarbera@peezy.com</td>
                         <td>+1 (304) 234 4344</td>
@@ -376,18 +380,686 @@
         </div>
         <!-- /.container-fluid -->
 
+        <!-- Customer Content -->
+        <div class="container-fluid" id="2" style="display: none;">
+              <div class="row justify-content-end mr-2 mb-1">
+                <h5 class="text-theme">Account Balance: &nbsp; <b class="text-gray-600"> &#8358; 23.00</b></h5>
+              </div>
+           <!-- Content Row -->
+          <div class="row">
+              
+
+            <!-- Call History -->
+            <div class="col-xl-4 col-md-4 mb-4" >
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <a type="btn" onclick="toggle(r1)" role="button"><div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-lg font-weight-bold text-primary text-uppercase mb-1">Calling History</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-phone fa-2x text-primary"></i>
+                    </div>
+                  </div></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Billing History -->
+            <div class="col-xl-4 col-md-4 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <a type="btn"  onclick="toggle(r2)" role="button"><div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-lg font-weight-bold text-success text-uppercase mb-1">Billing History</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-history fa-2x text-success"></i>
+                    </div>
+                  </div></a>
+                </div>
+              </div>
+            </div>
+
+             <!-- Phonebook -->
+            <div class="col-xl-4 col-md-4 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                 <a type="btn" onclick="toggle(r3)" role="button"><div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-lg font-weight-bold text-info text-uppercase mb-1">Phonebook</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-book fa-2x text-info"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="col-xl-4 col-md-4 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <a type="btn" onclick="toggle(r4)" role="button"><div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-lg font-weight-bold text-danger text-uppercase mb-1">Payment Cards</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-credit-card fa-2x text-danger"></i>
+                    </div>
+                  </div></a>
+                </div>
+              </div>
+            </div>
+
+             <!-- Email Affiliate -->
+            <div class="col-xl-4 col-md-4 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <a type="btn" onclick="toggle(r5)" role="button"><div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-lg font-weight-bold text-theme text-uppercase mb-1">Email Affiliate</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-at fa-2x text-theme"></i>
+                    </div>
+                  </div></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Customer Note -->
+            <div class="col-xl-4 col-md-4 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <a type="btn" onclick="toggle(r6)" role="button"><div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-lg font-weight-bold text-theme text-uppercase mb-1">Customer Note</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clipboard fa-2x text-theme"></i>
+                    </div>
+                  </div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!--Calling History-->
+          <div class="report" id="r1">
+           <!-- Card Header - Dropdown -->
+             <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h4 class="m-0 font-weight-normal ">Calling History</h4>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-sm btn-primary shadow-sm ml-1"><i class="fas fa-download fa-sm text-white-50"></i> Download Report</a>
+                  </div> 
+                </div>
+            <!-- Card Body - Customer Report -->
+            <div class="card-body">
+            <table class="table table-bordered" id="dataTable">
+
+                 <thead>
+                    <tr>
+                     <th>Call Destination</th>
+                      <th>Receipent</th>
+                      <th>Date - Time</th>
+                      <th>Duration</th>
+                      <th>Cost</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Nigeria</td>
+                      <td>Fred</td>
+                      <td>2017/04/25 17:32:33</td>
+                      <td>00:22:34</td>
+                      <td>&#x20A6; 23.00 </td>
+                    </tr>
+                    <tr>
+                      <td>USA</td>
+                      <td>Naza</td>
+                      <td>2015/04/25 15:32:33</td>
+                      <td>00:28:30</td>
+                      <td>&#x20A6; 13.00 </td>
+                    </tr>
+                    <tr>
+                      <td>CUBA</td>
+                      <td>Felix</td>
+                      <td>2015/04/05 05:02:33</td>
+                      <td>00:28:30</td>
+                      <td>&#x20A6; 3.00 </td>
+                    </tr>
+                    <tr>
+                      <td>India</td>
+                      <td>Raju</td>
+                      <td>2011/02/25 15:32:33</td>
+                      <td>00:08:30</td>
+                      <td>&#x20A6; 23.00 </td>
+                    </tr>
+                    <tr>
+                      <td>USA</td>
+                      <td>Naza</td>
+                      <td>2010/02/25 03:32:33</td>
+                      <td>00:28:30</td>
+                      <td>&#x20A6; 23.00 </td>
+                    </tr>
+                    <tr>
+                      <td>UK</td>
+                      <td>Jerry</td>
+                      <td>2010/01/01 03:32:33</td>
+                      <td>00:28:30</td>
+                      <td>&#x20A6; 23.00 </td>
+                    </tr>
+                    <tr>
+                      <td>Canada</td>
+                      <td>George</td>
+                      <td>2009/04/25 17:32:33</td>
+                      <td>00:22:34</td>
+                      <td>&#x20A6; 23.00 </td>
+                    </tr>
+                    <tr>
+                      <td>USA</td>
+                      <td>Naza</td>
+                      <td>2009/04/25 15:32:33</td>
+                      <td>00:28:30</td>
+                      <td>&#x20A6; 23.00 </td>
+                    </tr>
+                    <tr>
+                      <td>CUBA</td>
+                      <td>Felix</td>
+                      <td>2008/04/05 05:02:33</td>
+                      <td>00:28:30</td>
+                      <td>&#x20A6; 23.00 </td>
+                    </tr>
+                    <tr>
+                      <td>India</td>
+                      <td>Raju</td>
+                      <td>2008/02/25 15:32:33</td>
+                      <td>00:08:30</td>
+                      <td>&#x20A6; 23.00 </td>
+                    </tr>
+                    <tr>
+                      <td>USA</td>
+                      <td>Naza</td>
+                      <td>2008/02/25 03:32:33</td>
+                      <td>00:28:30</td>
+                      <td>&#x20A6; 23.00 </td>
+                    </tr>
+                    <tr>
+                      <td>UK</td>
+                      <td>Jerry</td>
+                      <td>2008/01/01 03:32:33</td>
+                      <td>00:28:30</td>
+                      <td>&#x20A6; 23.00 </td>
+                    </tr>
+                    
+                    
+                  </tbody>
+            </table>
+        </div>
+        </div>
+        </div>
+
+
+  <!-- BIlling History -->
+          <div class="report" id="r2">
+             <!-- Card Header - Dropdown -->
+             <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h4 class="m-0 font-weight-normal ">Billing History</h4>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-sm btn-primary shadow-sm ml-1"><i class="fas fa-download fa-sm text-white-50"></i> Download Report</a>
+                  </div> 
+                </div>
+            <!-- Card Body - Billing History -->
+            <div class="card-body">
+            <div class="table-reponsive">
+            <table class="table table-bordered" id="dataTable2">
+
+                <thead>
+                        <th>Date - Time</th>
+                        <th>Amount</th>
+                        <th>Card No.</th>
+                        <th>Transaction ID</th>
+                        <th>Confirmation ID</th>
+                        <th>IP Address</th>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$25.34</td>
+                      <td>**** 8779</td>
+                      <td>PP-002324355466</td>
+                      <td>B9895496I3</td>
+                      <td>172.129.69.200</td>
+                    </tr> 
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$15.34</td>
+                      <td>**** 8779</td>
+                      <td>EC-5435456066</td>
+                      <td>ASH7HKJ434</td>
+                      <td>172.129.69.200</td>
+                    </tr> 
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$30.00</td>
+                      <td>**** 8779</td>
+                      <td>MP-20324355466</td>
+                      <td>JK24JN34J4</td>
+                      <td>172.129.69.200</td>
+                    </tr> 
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$25.00</td>
+                      <td>**** 8779</td>
+                      <td>MP-8329u298537</td>
+                      <td>NI34KJN456</td>
+                      <td>172.129.69.200</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>**** 8779</td>
+                      <td>PP-002324355466</td>
+                      <td>JN34I6934J</td>
+                      <td>172.129.69.200</td>
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+      </div>
+
+        <!-- Phonebook -->
+            <div class="report" id="r3">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h4 class="m-0 font-weight-normal ">Phonebook</h4>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-sm btn-primary shadow-sm ml-1"><i class="fas fa-download fa-sm text-white-50"></i> Download Report</a>
+                  </div> 
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable3" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Phone Number</th>
+                      <th>Type</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>PayPal</td>
+                      <td>PP-002324355466</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>Eezy Charge</td>
+                      <td>EC-5435456066</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>PayPal</td>
+                      <td>PP-002324355466</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>Card</td>
+                      <td>CD-20324355466</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>Eezy Charge</td>
+                      <td>EC-5435456066</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>PayPal</td>
+                      <td>PP-002324355466</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>Eezy Charge</td>
+                      <td>EC-5435456066</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>Card</td>
+                      <td>CD-002324355466</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>Eezy Charge</td>
+                      <td>EC-5435456066</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>PayPal</td>
+                      <td>PP-002324355466</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>Eezy Charge</td>
+                      <td>EC-5435456066</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>PayPal</td>
+                      <td>PP-002324355466</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>Eezy Charge</td>
+                      <td>EC-5435456066</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>PayPal</td>
+                      <td>PP-002324355466</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>Eezy Charge</td>
+                      <td>EC-5435456066</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>PayPal</td>
+                      <td>PP-002324355466</td>
+                    </tr>
+                    <tr>
+                      <td>2011/04/25 03:32:33</td>
+                      <td>$43.34</td>
+                      <td>Eezy Charge</td>
+                      <td>EC-5435456066</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+              </div>
+            </div>
+
+           <!-- Cards -->
+          <div class="report" id="r4">
+            <!-- Card Header - Dropdown -->
+             <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h4 class="m-0 font-weight-normal ">Cards History</h4>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-sm btn-primary shadow-sm ml-1"><i class="fas fa-download fa-sm text-white-50"></i> Download Report</a>
+                  </div> 
+                </div>
+            <!-- Card Body - Gift Report -->
+            <div class="card-body">
+            <div class="table-reponsive">
+           <table class="table table2 table-bordered" id="dataTable">
+
+                <thead>
+                        <th>Card Name</th>
+                        <th>Card type</th>
+                        <th>Card Number</th>
+                        <th>Exp Date</th>
+                        <th>Date Added</th>
+                        <th>Address</th>
+                        <th style="width: 70px;">State</th>
+                        <th>Postal</th>
+                        <th>Country</th>
+                        <th>Status</th>
+                        <th style="width: 100px;">Actions</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Master Card</td>
+                        <td>**** 3244</td>
+                        <td>11/23</td>
+                        <td>2011/04/25 03:32:33</td>
+                        <td>2001 Martin Luther King Jr. Drive</td>
+                        <td>GA</td>
+                        <td>30310</td>
+                        <td>USA</td>
+                        <td>Active</td>
+                        <td>
+                            <a class="delete-card" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Peter Parker</td>
+                        <td>Visa</td>
+                        <td>**** 2445</td>
+                        <td>09/22</td>
+                        <td>2011/04/25 03:32:33</td>
+                        <td>2001 Martin Luther King Jr. Drive</td>
+                        <td>GA</td>
+                        <td>30310</td>
+                        <td>USA</td>
+                        <td>Inactive</td>
+                        <td>
+                            <a class="delete-card" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fran Wilson</td>
+                        <td>American Express</td>
+                        <td>*** 3244</td>
+                        <td>01/21</td>
+                        <td>2011/04/25 03:32:33</td>
+                        <td>2001 Martin Luther King Jr. Drive</td>
+                        <td>GA</td>
+                        <td>30310</td>
+                        <td>USA</td>
+                        <td>Active</td>
+                        <td>
+                            <a class="delete-card" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>      
+                </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Email Affiliate -->
+          <div class="report" id="r5">
+            <!-- Card Header - Dropdown -->
+             <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h4 class="m-0 font-weight-normal ">Email Affiliate</h4>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-sm btn-primary shadow-sm ml-1"><i class="fas fa-download fa-sm text-white-50"></i> Download Report</a>
+                  </div> 
+                </div>
+            <!-- Card Body - Gift Report -->
+            <div class="card-body">
+            <div class="table-reponsive">
+            <table class="table table-bordered" id="dataTable4">
+
+                <thead>
+                        <th>Date Registered</th>
+                        <th>Referree Name</th>
+                        <th>Referree Email</th>
+                        <th>Referrer Name</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Barbara Jones</td>
+                        <td>bjones@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>15/06/2010 12:01:32</td>
+                        <td>Geogre Jungle</td>
+                        <td>gjungle@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Fred Flinstone</td>
+                        <td>fflinstone@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Betty Rubble</td>
+                        <td>brubble@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Gomez Addams</td>
+                        <td>gaddams@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Eva Kant</td>
+                        <td>ekant@peezy.com</td>
+                        <td >Diabolik</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Ororo Monroe</td>
+                        <td>omonroe@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Charles Xavier</td>
+                        <td>cxavier@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    
+                     
+                </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+        </div> 
+
+        <!-- Email Affiliate -->
+          <div class="report" id="r6">
+            <!-- Card Header - Dropdown -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h4 class="m-0 font-weight-normal ">Customer Notes</h4>
+                </div>
+                <!-- Card Body - Gift Report -->
+                <div class="card-body">
+                  <div>
+                    <form class="needs-validation" novalidate>
+                      <textarea class="form-control"></textarea> 
+                      <button class="btn btn-primary float-right mt-1">Add Note</button>
+                    </form>
+                  </div>
+
+            <div class="table-reponsive mt-1">
+            <table class="table table-bordered" id="dataTable4">
+
+                <thead>
+                        <th>Date Registered</th>
+                        <th>Referree Name</th>
+                        <th>Referree Email</th>
+                        <th>Referrer Name</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Barbara Jones</td>
+                        <td>bjones@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>15/06/2010 12:01:32</td>
+                        <td>Geogre Jungle</td>
+                        <td>gjungle@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Fred Flinstone</td>
+                        <td>fflinstone@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Betty Rubble</td>
+                        <td>brubble@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Gomez Addams</td>
+                        <td>gaddams@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Eva Kant</td>
+                        <td>ekant@peezy.com</td>
+                        <td >Diabolik</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Ororo Monroe</td>
+                        <td>omonroe@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    <tr>
+                        <td>12/04/2020 23:34:32</td>
+                        <td>Charles Xavier</td>
+                        <td>cxavier@peezy.com</td>
+                        <td >Fred Quimby</td>
+                    </tr>
+                    
+                     
+                </tbody>
+            </table>
+          </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+
       </div>
       <!-- End of Main Content -->
 
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
 
     </div>
     <!-- End of Content Wrapper -->
@@ -419,20 +1091,120 @@
     </div>
   </div>
 
-  <!-- Cancel Create Modal-->
-  <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<!-- Reset Pin Modal-->
+  <div class="modal fade" id="setPinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="ModalLabel">Are You Sure?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Reset PIN</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Yes" below if you are no longer want to create the user.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">NO</button>
-          <a class="btn btn-primary" href="view-users.html">YES</a>
+        <div class="modal-body">              
+                    <form action="" class="needs-validation" novalidate>
+                      <div class="form-group old-password-input text--left">
+                          <input name="pincode" id="pin" type="password" class="pincode form-control login-field" inputmode="numeric" placeholder="Enter PIN" maxlength="4" pattern="[0-9]{4}" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please enter a number.</div>
+                      </div>
+
+                      <div class="form-group new-password-input text--left">
+                        <input name="c-pincode" id="c-pin" type="password" class="pincode form-control login-field" inputmode="numeric" placeholder="Confirm PIN" maxlength="4" pattern="[0-9]{4}" required>
+                          <!-- <input type="password" class=""   name="n-pswd" > -->
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please enter a number.</div>
+                      </div>
+
+                  </form>
+                 
+        </div>
+         <div class="modal-footer">
+          <button class="btn btn-primary" href="#" type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Reset Password Modal-->
+  <div class="modal fade" id="setPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Reset Password</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">              
+                    <form action="" class="needs-validation" novalidate>
+                      <div class="form-group old-password-input ">
+                          <input name="password" id="password" type="password" class=" form-control login-field"  placeholder="Enter Password" required>
+                          <span toggle="#password" class="form-group-append ri-eye-fill field-icon toggle-password"></span>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Feild cannot be empty.</div>
+                      </div>
+
+                      <div class="form-group new-password-input ">
+                        <input name="c-password" id="c-password" type="password" class=" form-control login-field"  placeholder="Confirm Password" required>
+                        <span toggle="#c-password" class="form-group-append ri-eye-fill field-icon toggle-password"></span>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Feild cannot be empty.</div>
+                      </div>
+
+                  </form>
+                 
+        </div>
+         <div class="modal-footer">
+          <button class="btn btn-primary" href="#" type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Recharge Account Modal-->
+  <div class="modal fade" id="rechargeAccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Recharge Account</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">              
+                    <form action="" class="needs-validation" novalidate>
+                      <div>
+                        <label  class = "control-label ">Amount</label>
+                        <select class="custom-select" id="manualRechargeAmount" >
+                          <option selected>Choose...</option>
+                          <option value="1">$10</option>
+                          <option value="2">$20</option>
+                          <option value="3">$25</option>
+                          <option value="3">$50</option>
+                          <option value="3">$100</option>
+                          <option value="3">$150</option>
+                          <option value="3">$175</option>
+                          <option value="3">$200</option>
+                        </select>
+                      </div>
+
+                      <!-- Card Selection/Addition -->
+                      <div class="pt-2">
+                          <label  class = "control-label ">Select Card</label>
+                          <select class="custom-select" id="savedCards" >
+                            <option selected>Choose...</option>
+                            <option value="1">Visa: **** 4223</option>
+                            <option value="2">Master: **** 4234</option>
+                          </select>
+                      </div>
+
+                    </form>
+                 
+        </div>
+         <div class="modal-footer">
+          <button class="btn btn-primary" href="#" type="submit">Submit</button>
         </div>
       </div>
     </div>

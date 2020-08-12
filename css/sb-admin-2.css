@@ -11481,8 +11481,17 @@ body.sidebar-toggled footer.sticky-footer {
     width: max-content;
     }
 
-  .pincode {
-        text-security: disc;
-        -webkit-text-security: disc;
-        -moz-text-security: disc;
-    }
+.pincode {
+  text-security: disc;
+  -webkit-text-security: disc;
+  -moz-text-security: disc;
+}
+
+.field-icon {
+  float: right;
+  margin-left: -20px;
+  margin-top: -30px;
+  position: relative;
+  z-index: 2;
+  padding-right: 10px;
+}
