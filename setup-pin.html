@@ -9,20 +9,16 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title> Admin Peezy - Dashboard</title>
+  <title>Peezy - Dashboard</title>
 
   <!-- Custom fonts for this template-->
-  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
 
   <!-- Custom styles for this template-->
-  <link href="../css/sb-admin-2.css" rel="stylesheet">
-
-  <link href="../remixicon/remixicon.css" rel="stylesheet">
-
-  <!-- Custom styles for this page -->
-  <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+  <link href="remixicon/remixicon.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
 </head>
@@ -33,12 +29,12 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-light accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin-dashboard.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-          <img src="../img/sidebar.png">
+          <img src="./img/sidebar.png">
         </div>
         <div class="sidebar-brand-text mx-3">Peezy</div>
       </a>
@@ -47,85 +43,70 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item ">
-        <a class="nav-link" href="admin-dashboard.html">
-          <i class="ri-fw ri-dashboard-fill"></i>
+      <li class="nav-item">
+        <a class="nav-link" href="dashboard.html">
+          <i class="ri-fw ri-home-8-line"></i>
           <span>Dashboard</span></a>
       </li>
 
-       <!-- Nav Item - Pages Collapse Menu -->
+      <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link " href="customer.html" >
-          <i class="ri-group-fill"></i>
-          <span>Customers</span>
+        <a class="nav-link " href="phonebook.html" >
+          <i class="ri-book-2-line"></i>
+          <span>Phonebook</span>
         </a>
       </li>
 
-      <!-- Nav Item - Tools -->
-      <li class="nav-item ">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTools" aria-expanded="true" aria-controls="collapseTools">    
-           <i class="ri-fw ri-tools-fill"></i>
-          <span>Tools</span>
-        </a>
-        <div id="collapseTools" class="collapse" aria-labelledby="headingTools" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="change-emails.html">Changed Email</a>
-            <a class="collapse-item" href="blocked-emails.html">Blocked Email Pattern</a>
-            <a class="collapse-item" href="email-affiliate.html">Email Affiliate</a>
-
-            <a class="collapse-item" href="change-account-no.html">Change Account No.</a>
-
-            <a class="collapse-item" href="missing-charge.html">Missing Charge</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Nav Item - Fraud Control -->
-      <li class="nav-item active border-right-primary">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFraud" aria-expanded="true" aria-controls="collapseFraud">    
-        <i class="ri-fw ri-shield-star-fill"></i>
-          <span>Fraud Controls</span>
-        </a>
-        <div id="collapseFraud" class="collapse show" aria-labelledby="headingFraud" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item active" href="blocked-ip.html">Blocked IP</a>
-            <a class="collapse-item" href="phone-verification.html">Phone Verification</a>
-          </div>
-        </div>
-      </li>
-
+      <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="report.html" data-toggle="collapse" data-target="#collapseReport" aria-expanded="true" aria-controls="collapseReport">
-          <i class="ri-fw ri-survey-fill"></i>
-          <span>Report</span>
+        <a class="nav-link " href="#" >
+           <i class="ri-fw ri-phone-line"></i>
+          <span>Call History</span>
         </a>
-        <div id="collapseReport" class="collapse" aria-labelledby="headingReport" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="report.html">Quick Report</a>
-            <a class="collapse-item" href="#">Gift Report</a>
-          </div>
-        </div>
       </li>
- 
 
+      <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
-          <i class="fas fa-fw fa-users"></i>
-          <span>Manage Users</span>
+        <a class="nav-link " href="payment.html" >
+          <i class="ri-fw ri-bank-card-line"></i>
+          <span>Peezy Payments</span>
         </a>
-        <div id="collapseUser" class="collapse" aria-labelledby="headingUser" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="create-users.html">Create Users</a>
-            <a class="collapse-item" href="view-users.html">View Users</a>
-            <a class="collapse-item" href="deactivated-users.html">Deactivated Users</a>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="gift-certificate.html">
+           <i class="ri-fw ri-gift-2-line"></i>
+          <span>Gift Certificates</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="ri-fw ri-star-line"></i>
+          <span>Peezy Rewards</span></a>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Demo</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-theme py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#">Hello!</a>
+            <a class="collapse-item" href="#">Hallo!</a>
+            <a class="collapse-item" href="#">Ni Huo!</a>
+            <a class="collapse-item" href="#">Bonjour!</a>
           </div>
         </div>
       </li>
+
  <!-- Divider -->
       <hr class="sidebar-divider">
 
  <!-- Nav Item - Tables -->
-      <li class="nav-item admin-profile.html">
+      <li class="nav-item">
         <a class="nav-link" href="profile-management.html">
           <i class="ri-fw ri-user-settings-line"></i>
           <span>Profile Management</span></a>
@@ -154,10 +135,6 @@
             <i class="fa fa-bars"></i>
           </button>
           
-              <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Admin Dashboard</h1>
-          </div>
           
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -222,11 +199,11 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="profile-management.html">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
-                <a class="dropdown-item" href="settings.html">
+                <a class="dropdown-item" href="#">
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                   Settings
                 </a>
@@ -248,57 +225,42 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
-          <div class="card shadow mb-4">
-             <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between table-title">
-                  <h4 class="m-0 font-weight-normal ">Blocked IP</h4>
-                  <div class="pull-right">
-                        <button type="button" class="btn btn-success add-new"><i class="fa fa-plus"></i> Add New</button>
-                  </div> 
+        <div class="container-fluid pt-5">
+          <center>
+            <!-- Area Chart -->
+            <div class="col-xl-4 col-lg-4 ">
+              <div class="card shadow">
+                <div class="card-header d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="font-weight-bold">Setup PIN</h4>
                 </div>
-                  <!-- Card Body -->
-            <div class="card-body">
-            <div class="table-responsive">
-            <table class="table table2 table-bordered" id="dataTable">
+                <!-- Card Body -->
+                <div class="card-body">
+                    <form action="" class="needs-validation" novalidate>
+                      <div class="form-group old-password-input text--left">
+                          <input name="pincode" id="pin" type="password" class="pincode form-control login-field" inputmode="numeric" placeholder="Enter PIN" maxlength="4" pattern="[0-9]{4}" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please enter a number.</div>
+                      </div>
 
-                <thead>
-                        <th>Date Added</th>
-                        <th>IP Address</th>
-                        <th>Actions</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>12/04/2020 23:34:32</td>
-                        <td>212.10.168.143</td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>23/10/2019</td>
-                        <td>172.129.69.200</td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>23/10/2019</td>
-                        <td>172.129.69.200</td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>     
-                </tbody>
-            </table>
-          </div>
+                      <div class="form-group new-password-input text--left">
+                        <input name="c-pincode" id="c-pin" type="password" class="pincode form-control login-field" inputmode="numeric" placeholder="Confirm PIN" maxlength="4" pattern="[0-9]{4}" required>
+                          <!-- <input type="password" class=""   name="n-pswd" > -->
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please enter a number.</div>
+                      </div>
+
+                      <button class="btn btn-primary pull-right" href="#" type="submit">Submit</button>
+
+                  	</form>
+                </div>
+              </div>
+            </div>
+
+      </center>
+
         </div>
-      </div>
-        </div>
-        <!-- /.container-fluid -->
+
+	 <!-- /.container-fluid -->
 
       </div>
       <!-- End of Main Content -->
@@ -337,28 +299,22 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="admin-login.html">Logout</a>
+          <a class="btn btn-primary" href="login.html">Logout</a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="../vendor/chart.js/Chart.min.js"></script>
-
-
-  <!-- DataTable Javascript -->
-  <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="../js/sb-admin-2.min.js"></script>
-  <script src="../js/custom.js"></script>
+  <script src="js/sb-admin-2.min.js"></script>
+  <script src="js/custom.js"></script>
 
 </body>
 

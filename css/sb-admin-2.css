@@ -10111,6 +10111,15 @@ a:focus {
   border-bottom: 0.25rem solid #5a5c69 !important;
 }
 
+.border-left-theme{
+  border-left: 0.25rem solid #FE9306 !important;
+}
+
+.border-bottom-theme{
+  border-bottom: 0.25rem solid #FE9306 !important;
+}
+
+
 .progress-sm {
   height: .5rem;
 }

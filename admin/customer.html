@@ -70,7 +70,7 @@
         </a>
         <div id="collapseTools" class="collapse" aria-labelledby="headingTools" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="changed-emails.html">Changed Email</a>
+            <a class="collapse-item" href="change-emails.html">Changed Email</a>
             <a class="collapse-item" href="blocked-emails.html">Blocked Email Pattern</a>
             <a class="collapse-item" href="email-affiliate.html">Email Affiliate</a>
             <a class="collapse-item" href="change-account-no.html">Change Account No.</a>
@@ -284,7 +284,7 @@
                               Action
                             </button>
                             <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item text-theme font-weight-bold" href="#" title="Edit" id="btnClick"><i class="material-icons">visibility</i> View</a>
+                              <a class="dropdown-item text-theme font-weight-bold" href="#" title="View" id="btnClick"><i class="material-icons">visibility</i> View</a>
                               <a class="dropdown-item text-info font-weight-bold" href="#" title="Reset" data-toggle="modal" data-target="#setPinModal"><i class="material-icons">refresh</i> Reset PIN</a>
                               <a class="dropdown-item text-secondary font-weight-bold" href="#" title="Reset" data-toggle="modal" data-target="#setPasswordModal"><i class="material-icons">refresh</i> Reset Password</a>
                               <a class="dropdown-item text-success font-weight-bold" href="#" title="Reset" data-toggle="modal" data-target="#rechargeAccount"><i class="material-icons">payment</i> Recharge Account</a>
@@ -455,7 +455,7 @@
 
              <!-- Email Affiliate -->
             <div class="col-xl-4 col-md-4 mb-4">
-              <div class="card border-left-danger shadow h-100 py-2">
+              <div class="card border-left-theme shadow h-100 py-2">
                 <div class="card-body">
                   <a type="btn" onclick="toggle(r5)" role="button"><div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -471,14 +471,14 @@
 
             <!-- Customer Note -->
             <div class="col-xl-4 col-md-4 mb-4">
-              <div class="card border-left-danger shadow h-100 py-2">
+              <div class="card border-left-secondary shadow h-100 py-2">
                 <div class="card-body">
                   <a type="btn" onclick="toggle(r6)" role="button"><div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-lg font-weight-bold text-theme text-uppercase mb-1">Customer Note</div>
+                      <div class="text-lg font-weight-bold text-secondary text-uppercase mb-1">Customer Note</div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-clipboard fa-2x text-theme"></i>
+                      <i class="fas fa-clipboard fa-2x text-secondary"></i>
                     </div>
                   </div></a>
                 </div>
@@ -682,15 +682,111 @@
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h4 class="m-0 font-weight-normal ">Phonebook</h4>
+                  <h4 class="m-0 font-weight-normal ">Pinless Dial</h4>
                   <div class="pull-right">
-                    <a href="#" class="btn btn-sm btn-primary shadow-sm ml-1"><i class="fas fa-download fa-sm text-white-50"></i> Download Report</a>
-                  </div> 
+                        <button type="button" class="btn btn-success shadow-sm add-new"><i class="fa fa-plus"></i> Add New</button>
+                    </div>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable3" width="100%" cellspacing="0">
+                <table class="table table2 table-bordered" id="dataTable">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Phone Number</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>John Doe</td>
+                      <td>(171) 555-2222</td>
+                      <td>Active</td>
+                      <td>
+                          <div class="dropdown mb-4">
+                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Action
+                            </button>
+                            <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="dropdown-item edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="dropdown-item delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                      <td>John Doe</td>
+                      <td>(171) 555-2222</td>
+                      <td>Inactive</td>
+                      <td>
+                          <div class="dropdown mb-4">
+                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Action
+                            </button>
+                            <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="dropdown-item edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="dropdown-item delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                      <td>John Doe</td>
+                      <td>(171) 555-2222</td>
+                      <td>Active</td>
+                      <td>
+                          <div class="dropdown mb-4">
+                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Action
+                            </button>
+                            <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="dropdown-item edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="dropdown-item delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                      <td>John Doe</td>
+                      <td>(171) 555-2222</td>
+                      <td>Inactive</td>
+                      <td>
+                          <div class="dropdown mb-4">
+                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Action
+                            </button>
+                            <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="dropdown-item edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="dropdown-item delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+              </div>
+
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h4 class="m-0 font-weight-normal ">Speed Dial</h4>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable4" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                       <th>Name</th>
@@ -982,7 +1078,7 @@
                   <div class="justify-center">
                     <form class="needs-validation" novalidate>
                       <textarea class="form-control"></textarea> 
-                      <button class="btn btn-primary float-right mt-1">Add Note</button>
+                      <button class="btn btn-primary float-right mt-1 mb-2">Add Note</button>
                     </form>
                   </div>
 
