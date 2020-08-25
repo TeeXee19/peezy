@@ -11452,6 +11452,33 @@ body.sidebar-toggled footer.sticky-footer {
     table.table2 td  {
     font-size: 15px;
     }    
+
+    
+     table.table3 {
+        table-layout: fixed;
+    }
+    table.table3 tr th, table.table2 tr td {
+        border-color: #e9e9e9;
+    }
+    table.table3 th i {
+        font-size: 13px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    table.table3 th:last-child {
+        width: 100px;
+    }
+    table.table3 td a {
+    cursor: pointer;
+        display: inline-block;
+        margin: 0 5px;
+    min-width: 24px;
+    }   
+
+    table.table3 td  {
+    font-size: 15px;
+    }    
+
   table.table td a.add {
         color: #27C46B;
     }
@@ -11489,6 +11516,7 @@ body.sidebar-toggled footer.sticky-footer {
   table.table td{
     width: max-content;
     }
+
 
 .pincode {
   text-security: disc;
