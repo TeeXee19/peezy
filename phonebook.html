@@ -22,8 +22,14 @@
   <link href="css/sb-admin-2.css" rel="stylesheet">
 
   <link href="remixicon/remixicon.css" rel="stylesheet">
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 </head>
@@ -236,44 +242,153 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-         
+         <div class="addNumber">
+           <a href="#" class="btn btn-sm btn-primary shadow-sm ml-1" data-toggle="modal" data-target="#numberModal"><i class="fas fa-edit fa-sm text-white-50"></i> Add Number</a>
+          </div>
           <div class="row">
 
             <!-- Area Chart -->
-            <div class="col-xl-4 col-lg-4">
-              <div class="card shadow mb-4 phonebook-contact">
+            <div class="col-xl-6 col-lg-6">
+             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold ">Contacts</h6>
+                  <h5 class="m-0 font-weight-bold ">Speed Dial</h5>
+
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                  <div class="p-3 bg-gray-100">.bg-gray-100</div>
-                  <div class="p-3 bg-gray-200">.bg-gray-200</div>
-                  <div class="p-3 bg-gray-300">.bg-gray-300</div>
-                  <div class="p-3 bg-gray-400">.bg-gray-400</div>
-                  <div class="p-3 bg-gray-500 text-white">.bg-gray-500</div>
-                  <div class="p-3 bg-gray-600 text-white">.bg-gray-600</div>
-                </div>
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                   <thead>
+                    <tr>
+                     <th>Speed Dial No.</th>
+                     <th>Name</th>
+                      <th>Phone Number</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>John John</td>
+                      <td>+49 412 328983</td>
+                      <td>
+                          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                          <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2</td>
+                      <td>John Mark</td>
+                      <td>+49 55675756</td>
+                      <td>
+                          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                          <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>3</td>
+                      <td>John Fred</td>
+                      <td>+49 46677422</td>
+                      <td>
+                          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                          <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>4</td>
+                      <td>John Frank</td>
+                      <td>+49 9029388923</td>
+                      <td>
+                          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                          <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                      </td>
+                    </tr>                    
+                    
+                  </tbody>
+                </table>
               </div>
+            </div>
+            </div>
             </div>
 
             
             <!-- Pie Chart -->
-            <div class="col-xl-8 col-lg-8">
-              <div class="card shadow mb-3 phonebook-info">
-               <div class="row">
-                 <div class="col-4"><img src="./img/Artwork.png"></div>
-                 <div class="col-7 offset-1">
-                   <h5 class="text-theme">Make an international call in 15 seconds or less!</h5>
-                   <p>With PIN Eezy you can skip the tedious process of entering your account and PIN number each time you make a phone call.</p>
-                   <button class="btn btn-section4 btn-primary" href="#" role="button">Set PINLess Dial <i class="ri-arrow-right-line ri-sm"></i></button>
-                 </div>
-               </div>
-              </div>
-
-            <!-- Pie Chart -->
+            <div class="col-xl-6 col-lg-6">
               <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold ">PinLess Dial</h5>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable2" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                     <th>Name</th>
+                      <th>Phone Number</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>John John</td>
+                      <td>+49 412 328983</td>
+                      <td>
+                          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                          <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>John Mark</td>
+                      <td>+49 55675756</td>
+                      <td>
+                          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                          <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>John Fred</td>
+                      <td>+49 46677422</td>
+                      <td>
+                          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                          <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>John Frank</td>
+                      <td>+49 9029388923</td>
+                      <td>
+                          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                          <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                      </td>
+                    </tr>                    
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            </div>
+
+            </div>
+            </div>
+            <!-- Pie Chart -->
+              <div class="card shadow mb-5">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h5 class="m-0 font-weight-bold ">Call History</h5>
@@ -281,7 +396,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable3" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                      <th>Call Destination</th>
@@ -369,8 +484,6 @@
                 </table>
               </div>
             </div>
-            </div>
-          </div>
           </div>
         </div>
         <!-- /.container-fluid -->
@@ -417,6 +530,50 @@
       </div>
     </div>
   </div>
+
+  <!-- Card Modal-->
+  <div class="modal fade" id="numberModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Number</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">              
+                    <form role="form">
+                        
+                        <div class="form-group">
+                          <label>Name</label>
+                          <input type="text" class="form-control" placeholder="Contact Name" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="Phone Number" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" required />
+                        </div>
+
+                        <!-- Dialing type -->
+                          <div class="form-group ">
+                            <label>Dialing type</label>
+                            <select class="custom-select" id="rechargeAmount" required>
+                              <option selected>Choose...</option>
+                              <option value="1">Speed Dial</option>
+                              <option value="2">Pinless Dial</option>
+                            </select>
+                          </div>
+                       
+                    </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-primary" href="#" type="submit">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>

@@ -11532,3 +11532,10 @@ body.sidebar-toggled footer.sticky-footer {
   z-index: 2;
   padding-right: 10px;
 }
+
+.addNumber{
+  display: grid;
+  grid-auto-columns: min-content;
+  justify-content: end;
+  margin-bottom: 20px;
+}
