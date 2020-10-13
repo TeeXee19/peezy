@@ -272,3 +272,13 @@ $(document).ready(function(){
     $(".add-new").removeAttr("disabled");
     });
 });
+
+$(document).ready(function () {
+  $('.plan-type').hide();
+  $('.p1').show();
+
+  $('#select').on("change",function () {
+    $('.plan-type').hide();
+    $('.p'+$(this).val()).show();
+  }).val("1");
+});

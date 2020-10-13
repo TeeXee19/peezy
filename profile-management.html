@@ -359,7 +359,7 @@
                   <div class="rounded-total bg-gray-200"><center ><i class="fas fa-wallet fa-2x text-gray-600 pt-2"></i></center></div>
                   <div class="ml-2">
                     <p class="mb-0 profile-account-header">Peezy Plan</p>
-                    <h3 class="profile-account-text text-gray-600">Continental Plan <span ><a href="#" class="text-green"><i class="ri-arrow-up-line"></i>Upgrade Plan</a></span></h3>
+                    <h3 class="profile-account-text text-gray-600">Continental Plan <span ><a href="#" class="text-green" data-toggle="modal" data-target="#planModal"><i class="ri-arrow-up-line"></i>Change Plan</a></span></h3>
                   </div>
                 </div>
 
@@ -417,6 +417,50 @@
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
           <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="planModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Peezy Plan</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form class="need-validation" action="" novalidate>
+                <h3>Select a Peezy Plan</h3>
+                <div class="form-group">
+                  <select class="custom-select" id="select">
+                    <option value="1">Peezy Continental Plan</option>
+                    <option value="2">Peezy Regional Plan</option>
+                  </select>
+
+                  <center class="form-group plan-type p2">
+                  <hr class="text-theme">
+                  <input type="radio" id="africa" name="africa" value="email">
+                  <label for="africa">Peezy Africa </label>
+
+                  <input type="radio" id="caribbean"
+                   name="caribbean" value="phone">
+                  <label for="caribbean">Peezy Caribbean</label>                
+                </center>
+                </div>
+
+
+
+
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="#">Save</a>
         </div>
       </div>
     </div>
