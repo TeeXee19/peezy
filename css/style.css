@@ -1863,6 +1863,7 @@ color: #404040;
 .features-img {
 	background-image: url(../img/features-bg.png);
 	background-repeat: no-repeat;
+	background-size: contain;
 
 }
 
@@ -1944,10 +1945,10 @@ width: 427px;
 }
 
 .features-section3 img{
-	position: absolute;
-	padding-left: 65px;
-	top: 3050px;
-	left: 611.667px;
+	position: relative;
+    padding-left: 65px;
+    top: -106px;
+    left: 61px;
 }
 
 .features-peezy-points{
@@ -1975,17 +1976,12 @@ width: 427px;
 }
 
 .rewards{
-	position: absolute;
-	width: 921px;
+	width: auto;
 	height: 360px;
-	left: 201px;
-
 	background: #FFFFFF;
 	box-shadow: 0px 0px 40px #EEEEEE;
 	border-radius: 8px;
-
 	padding: 69px 73px 69px 73px;
-
 }
 
 .rewards-checkbox{
