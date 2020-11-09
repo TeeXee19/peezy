@@ -7,11 +7,11 @@ var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Paying Users", "Active Users", "Domant Users"],
+    labels: ["Redeemed Points", "UnRedeemed Points"],
     datasets: [{
-      data: [30, 54, 16],
-      backgroundColor: ['#4e73df', '#1cc88a', '#e74a3b'],
-      hoverBackgroundColor: ['#2e59d9', '#17a673', '#e74a3b'],
+      data: [1400, 806],
+      backgroundColor: ['#FE9306', '#858794'],
+      hoverBackgroundColor: ['#ffa52f', '#9496a1'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
@@ -22,14 +22,14 @@ var myPieChart = new Chart(ctx, {
       bodyFontColor: "#858796",
       borderColor: '#dddfeb',
       borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
+      xPadding: 10,
+      yPadding: 10,
       displayColors: false,
-      caretPadding: 10,
+      caretPadding: 50,
     },
     legend: {
       display: false
     },
-    cutoutPercentage: 80,
+    cutoutPercentage: 0,
   },
 });

@@ -18,8 +18,9 @@
 
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
-  $('#dataTable').DataTable(
-    );
+  $('#dataTable').DataTable({
+    "order": [[2, "desc"]]
+  });
 
   $('#dataTable2').DataTable(
     );
@@ -201,6 +202,20 @@ $(document).ready(function(){
     );
      $('#dataTable4').DataTable(
     );
+
+     $('#dataTable5').DataTable(
+    );
+
+    $('#dataTable6').DataTable(
+    );
+
+     $('#dataTable7').DataTable(
+    );
+
+    $('#dataTable8').DataTable(
+    );
+    $('#dataTable9').DataTable(
+    );
  });
 
 function toggle(reportTab){
@@ -282,3 +297,16 @@ $(document).ready(function () {
     $('.p'+$(this).val()).show();
   }).val("1");
 });
+
+$(document).ready(function () {
+        var pwd = document.getElementById("pwd");
+        var cpwd = document.getElementById("cpwd");
+        pwd.onchange = ConfirmPassword;
+        cpwd.onkeyup = ConfirmPassword;
+        function ConfirmPassword() {
+            cpwd.setCustomValidity("");
+            if (pwd.value != cpwd.value) {
+                cpwd.setCustomValidity("Passwords do not match.");
+            }
+        }
+  });
