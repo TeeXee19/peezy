@@ -249,33 +249,15 @@
         <!-- Begin Page Content -->
         <div id="1" class="container-fluid">
 
-          <!-- Content Row -->
-          <div class="row">
 
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-5 col-md-5 mb-4">
-              <div class="card shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-lg font-weight-bold text-black-50 mb-1"><i class="fas fa-wallet fa-1x text-theme"></i> Continental Plan Bal: <span class="float-right">$90.00</span></div>
-                      <br>
-                      <button href="#" class="btn btn-secondary float-right"> Redeem Gift Card </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-7 col-md-7 mb-4">
-              <div class="card shadow h-100 py-2 card-bg">
+            <div class="mb-4">
+              <div class="card shadow py-2 card-bg">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     
                     <div class="col mr-2">
-                      <center>
-                        <div class="text-md w-50 font-weight-bold text-black-50 text-uppercase mb-1">Send a Peezy Gift Certificate today, it's real eezy!</div>
+                      <center class="p-4">
+                        <h4 class="text-md w-50 font-weight-bold text-black-50 text-uppercase mb-1">Send a Peezy Gift Certificate today, it's real eezy!</h4>
                       <button href="#" class="btn btn-primary float-center" id="btnClick"> Purchase Gift Certificate </button>
                     </center>
                     </div>
@@ -284,14 +266,12 @@
               </div>
             </div>
 
-          </div>
 
           <!-- Content Row -->
 
-          <div class="row">
 
             <!-- Area Chart -->
-            <div class="col-xl-8 col-lg-7">
+            <div >
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -313,15 +293,6 @@
               </div>
             </div>
 
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4 h-50">
-                <div class="card-body">
-                  
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <!-- /.container-fluid -->
         <div id="2" class="container-fluid" style="display: none;">
@@ -364,32 +335,40 @@
 
                          <div class = "form-group col-sm-12 col-lg-6">
                            <label for = "lastname" class = "col-sm-12 control-label">How much Gift Certificate do you want to Purchase?</label>
-                            <div class = "col-sm-6">
                               <select class="custom-select" id="inputGroupSelect02" required>
                                   <option selected>Choose...</option>
-                                  <option value="1">$1</option>
-                                  <option value="2">$2</option>
-                                  <option value="3">$3</option>
+                                  <option value="5">$5</option>
+                                  <option value="10">$10</option>
+                                  <option value="20">$20</option>
+                                  <option value="25">$25</option>
+                                  <option value="50">$50</option>
                                 </select>
-                              </div>
                          </div>
 
                         
                        </div>
                        <div class="row">
                           <div class = "form-group col-sm-12 col-lg-6">
-                            <label for = "lastname" class = "col-sm-4 control-label">Amount</label>
+                            <label for = "lastname" class = "col-sm-4 control-label">Last Name</label>
                             <div class = "col-sm-12">
                                <input type = "text" class="form-control " id = "amount" placeholder = "Enter Last Name" required>
                             </div>
                          </div>
+
                           <div class = "form-group col-sm-12 col-lg-6">
                             
-                            <div class="col-sm-12 mt-dif">
-                                <button type="submit" name="f-purchase" class="btn btn-primary">Purchase Gift Certificate</button> 
-                            </div>
+                            <label for = "lastname" class = "col-sm-12 control-label">Mode of Purchase</label>
+                              <select class="custom-select" id="inputGroupSelect02" required>
+                                  <option selected>Choose...</option>
+                                  <option value="PeezyBalance">Peezy Balance</option>
+                                  <option value="CreaditCard">Credit Card</option>
+                                  <option value="Paypal">Paypal</option>
+                                  <option value="PeezyPoint">Peezy Points</option>
+                                </select>
                          </div>
                        </div>
+                       <hr>
+                      <button type="submit" name="f-purchase" class="btn btn-primary float-right">Purchase Gift Certificate</button> 
                      </form>
                   </div>
                 </div>
